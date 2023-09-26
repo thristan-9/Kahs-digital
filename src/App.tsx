@@ -1,13 +1,15 @@
 import Hero from './components/pages/hero';
 import About from './components/pages/about';
-import NavBar from './components/navbar';
+import Header from './components/header';
 
 
 const App = () => (
   <div>
-    <NavBar />
-    <Hero/>
-    <About />
+    <main className="main">
+      <Header />
+      <Hero/>
+      <About />
+    </main>
   </div>
 )
 

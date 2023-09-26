@@ -1,21 +1,21 @@
-import { people01, people02, people03, facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star } from "../assets";
+let people01, people02, people03, facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star = 0;
 
 export const navLinks = [
     {
         id: "home",
-        title: "Inicio",
+        title: "Início",
     },
     {
-        id: "features",
-        title: "Features",
+        id: "about",
+        title: "Sobre",
     },
     {
-        id: "product",
-        title: "Product",
+        id: "services",
+        title: "Serviços",
     },
     {
-        id: "clients",
-        title: "Clients",
+        id: "contact",
+        title: "Contato",
     },
 ];
 
