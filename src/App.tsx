@@ -6,9 +6,11 @@ import Header from './components/header';
 const App = () => (
   <div>
     <main className="main">
-      <Header />
-      <Hero/>
-      <About />
+      <div className="bgContainer">
+        <Header />
+        <Hero/>
+        <About />
+      </div>
     </main>
   </div>
 )

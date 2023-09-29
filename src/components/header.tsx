@@ -1,7 +1,6 @@
 import { useState } from 'react'
-
-import style from '../styles/header.module.css'
 import { navLinks } from '../constants'
+import style from '../styles/header.module.css'
 
 export default function Header() {
 

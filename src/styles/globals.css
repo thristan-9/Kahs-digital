@@ -1,16 +1,17 @@
 :root {
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     
-    --header-height: 3.5rem;
-    /*56px*/
+    --header-height: 4.5rem;
 
     /*========== Colors ==========*/
-    --title-color: #000;
-    --text-color: #000;
-    --body-color: #000;
-    --light-color: #fff;
-    --dark-color: #000;
-    --header-color: #fff;
+    /* 0f0c29 */
+    /* 0F2027 */
+    --title-color: #0F2027;
+    --text-color: #0F2027;
+    --body-color: #0F2027;
+    --light-color: #F9F9F9;
+    --dark-color: #0F2027;
+    --header-color: #F9F9F9;
 
     /*========== Font and typography ==========*/
     /*.5rem = 8px | 1rem = 16px ...*/
@@ -80,7 +81,7 @@ textarea {
 }
 
 body {
-    margin: var(--header-height) 0 0 0;
+    /* margin: var(--header-height) 0 0 0; */
     background-color: var(--body-color);
     color: var(--text-color);
 }
@@ -134,8 +135,8 @@ img {
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
-.section {
-    padding: 5.5rem 0 1rem;
+section {
+    padding-top: var(--header-height);
 }
 
 .section__title,
@@ -150,7 +151,7 @@ img {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1050px;
     margin-left: var(--mb-1-5);
     margin-right: var(--mb-1-5);
 }
@@ -161,6 +162,12 @@ img {
 
 .pointer {
     cursor: pointer;
+}
+
+.bgContainer {
+    width: 100%;
+    background-color: var(--light-color);
+    min-height: var(--header-height);
 }
 
 /*=============== BREAKPOINTS ===============*/
@@ -178,9 +185,12 @@ img {
     }
 }
 
+
+
 /* For large devices */
-@media screen and (min-width: 1242px) {
+@media screen and (min-width: 1150px) {
     .container {
+        max-width: clamp(800px, 60%, 1300px);
         margin-left: auto;
         margin-right: auto;
     }
