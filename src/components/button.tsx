@@ -1,16 +1,18 @@
 import React from "react"
-import style from '../styles/button.module.css'
+import style from '../styles/Button.module.css'
 
 
 interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
     disabled?: boolean;
+    children?: React.ReactNode;
     label?: string;
+    secondary?: boolean;
 }
 
-const Button = ({ label, disabled, ...props } : ButtonProps) => {
+const Button = ({ label, disabled, children, secondary, ...props } : ButtonProps) => {
     return (
-        <button disabled={disabled} className={style.btn} {...props} >
-            {label}
+        <button type="button" disabled={disabled} className={`${style.btn} ${secondary ? style.secondary : ""}`} {...props} >
+            {children || label}
         </button>
     )
 }

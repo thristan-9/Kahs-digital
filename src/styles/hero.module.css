@@ -1,5 +1,5 @@
 .home__container {
-    height: calc(100vh - var(--header-height));
+    height: 100vh;
     position: relative;
 }
 
@@ -60,6 +60,9 @@
 }
 
 @media screen and (min-width: 300px) {
+    .home__container {
+        padding-top: var(--header-height);
+    }
 
     .hero__ellipse {
         width: clamp(20rem, 100%, 50rem);
@@ -82,6 +85,7 @@
         grid-template-columns: repeat(2, 1fr);
         align-items: center;
         position: relative;
+        padding: 0;
     }
 
     .home__data {
@@ -106,7 +110,4 @@
         height: 75%;
     }
 
-    .home__description {
-        max-width: 325px;
-    }
 }

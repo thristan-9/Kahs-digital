@@ -1,10 +1,10 @@
-import style from '../../styles/hero.module.css'
+import style from '../../styles/Hero.module.css'
 import heroImg from '../../assets/hero__img.png'
-import Button from '../button';
+import Button from '../Button';
 
 export default function Hero() {
   return (
-    <section className={`${style.hero}`}>
+    <section className={style.hero}>
       <div className={`${style.home__container} container grid`}>
         
         <div className={`${style.home__data}`}>
@@ -12,7 +12,7 @@ export default function Hero() {
             Gerenciamento <br /> de Midias <br /> <span className={style.text__gradient}>Sociais</span>
           </h1>
           <h3 className={`${style.home__description}`}>
-            Aumente sua visibilidade e conquiste resultados reais nas redes sociais.
+            Aumente sua visibilidade e conquiste <br/> resultados reais nas redes sociais.
           </h3>
 
           <Button label="Serviços"/>
@@ -27,7 +27,6 @@ export default function Hero() {
         <img className={style.hero__img} src={heroImg}/>
 
       </div>
-
     </section>
   )
 }

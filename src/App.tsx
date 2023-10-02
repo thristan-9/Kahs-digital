@@ -1,6 +1,8 @@
-import Hero from './components/pages/hero';
-import About from './components/pages/about';
-import Header from './components/header';
+import Header from './components/Header';
+import Hero from './components/pages/Hero';
+import About from './components/pages/About';
+import HowWork from './components/pages/HowWork';
+
 
 
 const App = () => (
@@ -11,6 +13,7 @@ const App = () => (
         <Hero/>
         <About />
       </div>
+      <HowWork/>
     </main>
   </div>
 )

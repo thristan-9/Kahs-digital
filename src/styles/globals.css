@@ -6,11 +6,11 @@
     /*========== Colors ==========*/
     /* 0f0c29 */
     /* 0F2027 */
-    --title-color: #0F2027;
-    --text-color: #0F2027;
-    --body-color: #0F2027;
+    --title-color: #050505;
+    --text-color: #050505;
+    --body-color: #050505;
     --light-color: #F9F9F9;
-    --dark-color: #0F2027;
+    --dark-color: #050505;
     --header-color: #F9F9F9;
 
     /*========== Font and typography ==========*/
@@ -81,9 +81,12 @@ textarea {
 }
 
 body {
-    /* margin: var(--header-height) 0 0 0; */
     background-color: var(--body-color);
     color: var(--text-color);
+}
+
+body::-webkit-scrollbar {
+    display: none;
 }
 
 button {
@@ -135,9 +138,6 @@ img {
 }
 
 /*=============== REUSABLE CSS CLASSES ===============*/
-section {
-    padding-top: var(--header-height);
-}
 
 .section__title,
 .section__title-center {
@@ -168,6 +168,9 @@ section {
     width: 100%;
     background-color: var(--light-color);
     min-height: var(--header-height);
+    padding-bottom: 5rem;
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
 }
 
 /*=============== BREAKPOINTS ===============*/
