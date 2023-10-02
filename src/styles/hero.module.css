@@ -59,30 +59,6 @@
     }
 }
 
-
-.btn {
-    position: relative;
-    display: inline-block;
-    padding: 10px 20px;
-    color: var(--light-color);
-    text-transform: uppercase;
-    overflow: hidden;
-    transition: .5s;
-    letter-spacing: 4px;
-    border-radius: 25px;
-    border: solid 2px var(--dark-color);
-    
-    z-index: var(--z-tooltip);
-    background-color: var(--dark-color);
-}
-
-.btn:hover{
-    color: var(--dark-color);
-    background-color: var(--light-color);
-}
-
-
-
 @media screen and (min-width: 300px) {
 
     .hero__ellipse {

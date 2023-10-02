@@ -1,7 +1,8 @@
 import style from '../../styles/hero.module.css'
 import heroImg from '../../assets/hero__img.png'
+import Button from '../button';
 
-const Hero = () => {
+export default function Hero() {
   return (
     <section className={`${style.hero}`}>
       <div className={`${style.home__container} container grid`}>
@@ -14,10 +15,8 @@ const Hero = () => {
             Aumente sua visibilidade e conquiste resultados reais nas redes sociais.
           </h3>
 
-          <button href="#" className={style.btn}>
-            Serviços
-          </button>
-            
+          <Button label="Serviços"/>
+
         </div>
 
         {/* <video autoPlay loop muted playsInline className={`${style.hero__img}`} >
@@ -32,5 +31,3 @@ const Hero = () => {
     </section>
   )
 }
-
-export default Hero
