@@ -1,3 +1,75 @@
 .howWork__container {
     height: 100vh;
+    padding-top: 4rem;
+}
+
+.top__container {
+    text-align: center;
+    padding: 0rem 0;
+    height: 25%;
+}
+
+.top__title {
+    margin-bottom: var(--mb-1-5);
+    color: var(--light-color);
+    font-size: clamp(1.5rem, 2vw, 3rem);
+}
+
+.top__description {
+    color: var(--light-color);
+    margin-bottom: var(--mb-1-5);
+    font-size: clamp(1rem, 1vw, 1.5rem);
+}
+
+.middle__container {
+    position: relative;
+    background-color: var(--light-color);
+    border-radius: 40px;
+    height: 50%;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.iphone__frame {
+    position: absolute;
+    background-image: url(../assets/iphone__frame.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: auto;
+    height: 130%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    top: -15%;
+    background-size: contain;
+}
+
+.iphone__frame_img {
+    visibility: hidden;
+    width: auto;
+    height: 100%;
+    width: 100%;
+}
+
+.iphone__img_container {
+    position: absolute;
+    background-image: url(../assets/iphone__img_1.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 97%;
+    height: 97%;
+    top: 1%;
+    left: 4.5%;
+    background-size: contain;
+}
+
+.iphone__img {
+    visibility: hidden;
+    width: auto;
+    height: 100%;
+    width: 100%;
+}
+
+.bottom__container {
+    height: 25%;
 }

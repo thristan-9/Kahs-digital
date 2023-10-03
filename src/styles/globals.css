@@ -139,17 +139,6 @@ img {
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 
-.section__title,
-.section__title-center {
-    font-size: var(--h2-font-size);
-    margin-bottom: var(--mb-2);
-    line-height: 140%;
-}
-
-.section__title-center {
-    text-align: center;
-}
-
 .container {
     max-width: 1050px;
     margin-left: var(--mb-1-5);
@@ -168,7 +157,7 @@ img {
     width: 100%;
     background-color: var(--light-color);
     min-height: var(--header-height);
-    padding-bottom: 5rem;
+    padding-bottom: 10rem;
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
 }

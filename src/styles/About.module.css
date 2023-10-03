@@ -31,7 +31,7 @@
 }
 
 .logo {
-    width: clamp(100px, 80%, 400px);
+    width: clamp(100px, 80%, 300px);
     margin-left: auto;
     margin-right: auto;
 }
@@ -54,6 +54,6 @@
     }
 
     .logo {
-        width: clamp(300px, 90%, 450px);
+        width: clamp(250px, 90%, 400px);
     }
 }
