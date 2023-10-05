@@ -7,9 +7,9 @@ import HowWork from './components/pages/HowWork';
 
 const App = () => (
   <div>
+    <Header />
     <main className="main">
       <div className="bgContainer">
-        <Header />
         <Hero/>
         <About />
       </div>

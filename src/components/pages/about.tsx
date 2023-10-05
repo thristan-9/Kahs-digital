@@ -3,7 +3,7 @@ import logo from '../../assets/kahs_logo.png'
 
 export default function About() {
     return (
-        <section>
+        <section id='about'>
             <div className={`${style.about__container}`}>           
 
                 <img className={style.logo} src={logo} />  

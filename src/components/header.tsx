@@ -33,14 +33,14 @@ export default function Header() {
             {navLinks.map((nav: nav)=> {
               return (
                 <li key={`${nav.id}`}>
-                  <a onClick={() => setMenuActive(false)} href={`#${nav.id}`} className={style["nav__link"]}>{nav.title}</a>
+                  <a onClick={() => setMenuActive(false)} href={`#${nav.id}`} className={style["nav__link"]}><p>{nav.title}</p></a>
                 </li>
               )
             })}
           </ul>
 
           <div className={style["nav__close"]} id="nav-close">
-            <span onClick={() => toggleMenu()} className="material-icons-outlined pointer">
+            <span onClick={() => toggleMenu()} className="material-icons-outlined icon">
               close
             </span>
           </div>
@@ -48,7 +48,7 @@ export default function Header() {
         </div>
 
         <div className={style["nav__toggle"]} id="nav-toggle">
-          <span onClick={() => toggleMenu()} className="material-icons-outlined pointer">
+          <span onClick={() => toggleMenu()} className="material-icons-outlined icon">
             menu
           </span>
         </div>
