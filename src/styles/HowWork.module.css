@@ -1,11 +1,11 @@
 .howWork__container {
-    padding-top: 4rem;
+    padding-top: 3rem;
     position: relative;
 }
 
 .top__container {
     text-align: center;
-    height: 27vh;
+    height: 20vh;
 }
 
 .top__title {
@@ -21,15 +21,9 @@
 }
 
 .middle__container {
+    display: grid;
     background-color: var(--light-color);
     border-radius: 40px;
-    height: 65vh;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    grid-template-columns: 1fr 1fr;
-    grid-column-gap: 30%;
-    display: none;
 }
 
 .midlle__box {
@@ -47,7 +41,6 @@
     width: auto;
     left: 50%;
     transform: translate(-50%, 0);
-    top: 22vh;
 }
 
 .iphone__frame {
@@ -140,16 +133,51 @@
 
 @media screen and (min-width: 300px) {
     .middle__container {
-        display: none;
+        width: 90%;
+        padding-block: 3rem;
+        margin-inline: auto;
+        gap: 2rem;
+        padding-bottom: 7rem;
+    }
+
+    .iphone_slide_wrapper {
+        position: relative;
+        margin-top: -5rem;
+    }
+
+    .slider__wrapper{
+        /* width: 76%; */
+        /* left: 12%; */
+        border-radius: 30px;
     }
 }
 
 @media screen and (min-width: 1150px) {
+    .top__container {
+        height: 30vh;
+    }
+
     .middle__container {
         display: grid;
+        height: 65vh;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 30%;
     }
 
     .iphone__frame {
         width: auto
+    }
+
+    .iphone_slide_wrapper {
+        top: 27vh;
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .iphone_slide_wrapper {
+        top: 24vh;
     }
 }

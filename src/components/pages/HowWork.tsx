@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState } from "react";
 import style from "../../styles/HowWork.module.css";
 import iphone__frame from "../../assets/iphone__frame.png";
 import iphone__img_1 from "../../assets/iphone__img_1.png";
@@ -9,13 +9,6 @@ import Button from "../Button";
 export default function HowWork() {
 
   const [dotSelected, setDotSelected] = useState(1);
-  const dotRef1 = useRef(null);
-  const dotRef2 = useRef(null);
-  const dotRef3 = useRef(null);
-
-  function simulateClickDot() {
-    dotRef2.current.click();
-  }
 
   return (
     <section id="services">

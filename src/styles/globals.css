@@ -160,7 +160,7 @@ img {
     width: 100%;
     background-color: var(--light-color);
     min-height: var(--header-height);
-    padding-bottom: 10rem;
+    padding-bottom: clamp(5rem, 10%, 10rem);
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
 }
