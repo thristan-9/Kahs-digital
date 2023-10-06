@@ -52,6 +52,7 @@ export default function HowWork() {
         </div>
 
         <div className={`${style.iphone_slide_wrapper}`}>
+
           <div className={style.iphone__frame}>
             <img className={style.iphone__frame_img} src={iphone__frame} />
 
@@ -74,6 +75,7 @@ export default function HowWork() {
                 />
               </div>
             </div>
+            
           </div>
 
           <div className={style.slider__nav}>

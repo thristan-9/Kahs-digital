@@ -57,13 +57,8 @@
 }
 
 .nav__link {
-    color: var(--title-color);
-    font-weight: var(--font-medium);
+    display: block;
     transition: .3s;
-}
-
-.nav__link:hover {
-    color: var(--text-color);
 }
 
 .nav__close {
@@ -94,5 +89,9 @@
 
     .nav__menu {
         margin-left: auto;
+    }
+
+    .nav__link:hover {
+        transform: translateY(-3px);
     }
 }

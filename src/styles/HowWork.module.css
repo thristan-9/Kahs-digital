@@ -36,9 +36,9 @@
 }
 
 .iphone_slide_wrapper {
-    position: absolute;
-    height: 85vh;
-    width: auto;
+    position: relative;
+    width: 85%;
+    margin-top: -5rem;
     left: 50%;
     transform: translate(-50%, 0);
 }
@@ -64,7 +64,7 @@
     width: 92%;
     top: 1%;
     left: 4.5%;
-    border-radius: 50px;
+    border-radius: 35px;
 }
 
 .slider {
@@ -122,8 +122,7 @@
 }
 
 .bottom__container {
-    padding-top: 10rem;
-    height: 30vh;
+    height: 20vh;
     display: grid;
     justify-content: center;
     align-content: center;
@@ -140,21 +139,29 @@
         padding-bottom: 7rem;
     }
 
-    .iphone_slide_wrapper {
-        position: relative;
-        margin-top: -5rem;
+    .slider__wrapper {
+        height: auto;
+        width: 90%;
+        top: 1%;
+        left: 5%;
     }
+}
 
-    .slider__wrapper{
-        /* width: 76%; */
-        /* left: 12%; */
-        border-radius: 30px;
+@media screen and (min-width: 500px) {
+    .iphone_slide_wrapper {
+        width: 65%;
+        margin-top: -5rem;
     }
 }
 
 @media screen and (min-width: 1150px) {
     .top__container {
         height: 30vh;
+    }
+
+    .bottom__container {
+        height: 30vh;
+        padding-top: 10rem;
     }
 
     .middle__container {
@@ -172,7 +179,11 @@
     }
 
     .iphone_slide_wrapper {
+        position: absolute;
+        height: 85vh;
+        width: auto;
         top: 27vh;
+        margin-top: initial;
     }
 }
 
