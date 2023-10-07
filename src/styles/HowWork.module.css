@@ -72,8 +72,7 @@
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    width: 100%;
-    height: 100%;
+    -webkit-overflow-scrolling: touch;
 }
 
 .slider::-webkit-scrollbar {
@@ -102,6 +101,18 @@
     justify-content: center;
     margin-top: 2rem;
     width: 100%;
+}
+
+.ri:checked ~ .slider {
+    margin-left: 0%;
+}
+
+.r2:checked~.slider {
+    margin-left: -20%;
+}
+
+.r3:checked~.slider {
+    margin-left: -100%;
 }
 
 .slider__nav_dot {
@@ -184,6 +195,10 @@
         width: auto;
         top: 27vh;
         margin-top: initial;
+    }
+  
+    .slider__wrapper {
+        border-radius: 50px;
     }
 }
 
