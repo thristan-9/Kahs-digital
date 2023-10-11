@@ -5,7 +5,7 @@
 
 .top__container {
     text-align: center;
-    height: 20vh;
+    height: 12rem;
 }
 
 .top__title {
@@ -22,23 +22,51 @@
 
 .middle__container {
     display: grid;
-    background-color: var(--light-color);
-    border-radius: 40px;
+    width: 90%;
+    margin-inline: auto;
+    gap: 2rem;
+        margin-bottom: 9rem;
 }
 
-.midlle__box {
+.middle__container::before {
+    content: "";
+    width: 70%;
+    background-color: var(--light-color);
+    height: 1px;
+    margin-inline: auto;
+    border-radius: 50px;
+}
+
+.middle__box {
     display: grid;
     justify-content: center;
     align-content: center;
     text-align: center;
-    color: #606060;
+    color: var(--light-color);
     font-size: var(--h3-font-size);
+}
+
+.box__2 {
+    display: none;
+}
+
+.box__text {
+    color: var(--light-color);
+}
+
+.bgWhite {
+    background-color: var(--light-color);
+    width: 100%;
+    height: 30rem;
+    min-height: 500px;
+    border-radius: 5px;
 }
 
 .iphone_slide_wrapper {
     position: relative;
-    width: 85%;
-    margin-top: -5rem;
+    width: auto;
+    max-width: 85%;
+    margin-top: -35rem;
     left: 50%;
     transform: translate(-50%, 0);
 }
@@ -61,18 +89,20 @@
     position: absolute;
     overflow: hidden;
     height: 82.5vh;
-    width: 92%;
+    width: auto;
     top: 1%;
     left: 4.5%;
-    border-radius: 35px;
+    border-radius: 50px;
 }
 
 .slider {
     display: flex;
+    width: 100%;
+    gap: 10px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
+    border-radius: 50px;
 }
 
 .slider::-webkit-scrollbar {
@@ -81,18 +111,9 @@
 
 .iphone__img {
     height: 100%;
-    width: auto;
+    width: 100%;
     scroll-snap-align: start;
     object-fit: cover;
-}
-
-.slide__1 {
-    margin-right: 2rem;
-}
-
-.slide__3 {
-    margin-left: 2rem;
-    margin-right: 2rem
 }
 
 .slider__nav {
@@ -101,18 +122,6 @@
     justify-content: center;
     margin-top: 2rem;
     width: 100%;
-}
-
-.ri:checked ~ .slider {
-    margin-left: 0%;
-}
-
-.r2:checked~.slider {
-    margin-left: -20%;
-}
-
-.r3:checked~.slider {
-    margin-left: -100%;
 }
 
 .slider__nav_dot {
@@ -133,26 +142,23 @@
 }
 
 .bottom__container {
-    height: 20vh;
     display: grid;
     justify-content: center;
     align-content: center;
     text-align: center;
+    padding-block: 3rem;
+}
+
+.box__3 {
+    margin-bottom: 2rem;
 }
 
 
 @media screen and (min-width: 300px) {
-    .middle__container {
-        width: 90%;
-        padding-block: 3rem;
-        margin-inline: auto;
-        gap: 2rem;
-        padding-bottom: 7rem;
-    }
-
     .slider__wrapper {
-        height: auto;
-        width: 90%;
+        height: 92%;
+        width: auto;
+        max-width: 90%;
         top: 1%;
         left: 5%;
     }
@@ -160,8 +166,7 @@
 
 @media screen and (min-width: 500px) {
     .iphone_slide_wrapper {
-        width: 65%;
-        margin-top: -5rem;
+        width: 60%;
     }
 }
 
@@ -177,12 +182,39 @@
 
     .middle__container {
         display: grid;
-        height: 65vh;
+        height: 70vh;
         width: 90%;
         margin-left: auto;
         margin-right: auto;
         grid-template-columns: 1fr 1fr;
         grid-column-gap: 30%;
+        background-color: var(--light-color);
+        border-radius: 40px;
+    }
+
+    .middle__container::before {
+        content: none
+    }
+
+    .middle__box {
+        color: #606060;
+        font-size: var(--h3-font-size);
+    }
+
+    .box__2 {
+        display: grid;
+    }
+
+    .box__3 {
+        display: none;
+    }
+
+    .bgWhite {
+        display: none;
+    }
+
+    .box__text {
+        color: var(--text-color);
     }
 
     .iphone__frame {
@@ -193,17 +225,17 @@
         position: absolute;
         height: 85vh;
         width: auto;
-        top: 27vh;
+        top: 28vh;
         margin-top: initial;
     }
-  
+
     .slider__wrapper {
-        border-radius: 50px;
+        height: 82.5vh;
     }
 }
 
 @media screen and (min-width: 1600px) {
     .iphone_slide_wrapper {
-        top: 24vh;
+        top: 26vh;
     }
 }

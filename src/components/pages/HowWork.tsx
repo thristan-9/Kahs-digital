@@ -1,4 +1,5 @@
 import { useState } from "react";
+
 import style from "../../styles/HowWork.module.css";
 import iphone__frame from "../../assets/iphone__frame.png";
 import iphone__img_1 from "../../assets/iphone__img_1.png";
@@ -23,33 +24,35 @@ export default function HowWork() {
 
         <div className={`${style.middle__container}`}>
 
-          <div className={style.midlle__box}>
+          <div className={style.middle__box}>
             <span className="material-icons-outlined icon">videocam</span>
-            <p>Criaçao de conteudo em alta qualidade</p>
-            <p>
+            <p className={style.box__text}>Criaçao de conteudo em alta qualidade</p>
+            <p className={style.box__text}>
               com <strong>Equipamentos Profissionais</strong>
             </p>
           </div>
 
-          <div className={style.midlle__box}>
-            <span className="material-icons-outlined icon">insights</span>
-            <p>Analise de dados detalhada sobre</p>
-            <p>os conteudos postados</p>
-          </div>
-
-          <div className={style.midlle__box}>
-            <span className="material-icons-outlined icon">add</span>
-            <p>de 30 mil visualizacoes</p>
-            <p>no primeiro mes</p>
-          </div>
-
-          <div className={style.midlle__box}>
+          <div className={style.middle__box}>
             <span className="material-icons-outlined icon">business</span>
-            <p>Padronizacao da identidade</p>
-            <p>visual da marca</p>
+            <p className={style.box__text}>Padronizacao da identidade</p>
+            <p className={style.box__text}>visual da marca</p>
+          </div>
+
+          <div className={`${style.middle__box} ${style.box__2}`}>
+            <span className="material-icons-outlined icon">add</span>
+            <p className={style.box__text}>de 30 mil visualizacoes</p>
+            <p className={style.box__text}>no primeiro mes</p>
+          </div>
+
+          <div className={`${style.middle__box} ${style.box__2}`}>
+            <span className="material-icons-outlined icon">insights</span>
+            <p className={style.box__text}>Analise de dados detalhada sobre</p>
+            <p className={style.box__text}>os conteudos postados</p>
           </div>
 
         </div>
+
+        <div className={`${style.bgWhite}`}></div>
 
         <div className={`${style.iphone_slide_wrapper}`}>
 
@@ -58,24 +61,12 @@ export default function HowWork() {
 
             <div className={style.slider__wrapper}>
               <div className={style.slider}>
-                <img
-                  id="slide-1"
-                  className={`${style.iphone__img} ${style.slide__1}`}
-                  src={iphone__img_1}
-                />
-                <img
-                  id="slide-2"
-                  className={`${style.iphone__img} ${style.slide__2}`}
-                  src={iphone__img_2}
-                />
-                <img
-                  id="slide-3"
-                  className={`${style.iphone__img} ${style.slide__3}`}
-                  src={iphone__img_3}
-                />
+                <img id="slide-1" className={style.iphone__img} src={iphone__img_1} />
+                <img id="slide-2" className={style.iphone__img} src={iphone__img_2} />
+                <img id="slide-3" className={style.iphone__img} src={iphone__img_3} />
               </div>
             </div>
-            
+
           </div>
 
           <div className={style.slider__nav}>
@@ -85,7 +76,22 @@ export default function HowWork() {
           </div>
         </div>
 
+
+
         <div className={style.bottom__container}>
+
+          <div className={`${style.middle__box} ${style.box__3}`}>
+            <span className="material-icons-outlined icon">insights</span>
+            <p className={style.box__text}>Analise de dados detalhada sobre</p>
+            <p className={style.box__text}>os conteudos postados</p>
+          </div>
+
+          <div className={`${style.middle__box} ${style.box__3}`}>
+            <span className="material-icons-outlined icon">add</span>
+            <p className={style.box__text}>de 30 mil visualizacoes</p>
+            <p className={style.box__text}>no primeiro mes</p>
+          </div>
+
           <Button secondary label="Contato" />
         </div>
       </div>

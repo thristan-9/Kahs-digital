@@ -1,6 +1,7 @@
 .btn {
     position: relative;
     display: inline-block;
+    width: fit-content;
     padding: 10px 20px;
     color: var(--light-color);
     text-transform: uppercase;
@@ -11,6 +12,7 @@
     border: solid 2px var(--dark-color);
     z-index: var(--z-tooltip);
     background-color: var(--dark-color);
+    margin: auto;
 }
 
 .btn:hover {
