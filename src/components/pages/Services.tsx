@@ -21,7 +21,7 @@ export default function Services() {
                                     <h2>
                                         {item.title}
                                     </h2>
-                                    <p>
+                                    <p className={`${style.service__description}`}>
                                         {item.content}
                                     </p>
                                 </div>

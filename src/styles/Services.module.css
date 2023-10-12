@@ -4,7 +4,7 @@
 }
 
 .service__img {
-    width: clamp(20em, 80%, 25em);
+    width: clamp(15em, 35%, 25em);
     max-width: 400px;
     margin-left: auto;
     margin-right: auto;
@@ -42,5 +42,10 @@
 
     .service__img:hover {
         transform: translateX(+10px) translateY(-10px) rotate(1deg);
+    }
+
+    .service__description {
+        max-width: 500px;
+        margin-inline: auto;
     }
 }

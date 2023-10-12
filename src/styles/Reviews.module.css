@@ -1,8 +1,33 @@
 .reviews__container {
     text-align: center;
     margin-top: 5rem;
+    height: calc(100vh - 5rem);
 }
 
 .reviews__title {
     color: var(--light-color);
 }
+
+.reviews__data {
+    position: relative;
+    height: 80%;
+}
+
+.blob {
+    position: absolute;
+    background-color: #b62899;
+    height: 300px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    translate: -50% -50%
+}
+
+/* @media screen and (min-width: 1150px) {
+
+}
+
+@media screen and (min-width: 1550px) {
+    
+} */

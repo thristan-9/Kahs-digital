@@ -1,4 +1,4 @@
-let facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star = 0;
+let facebook, instagram, linkedin, twitter, airbnb = 0;
 import img1 from "../assets/services_1.svg";
 import img2 from "../assets/services_2.svg";
 import img3 from "../assets/services_3.svg";
