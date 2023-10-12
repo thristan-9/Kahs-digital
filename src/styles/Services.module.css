@@ -4,7 +4,7 @@
 }
 
 .service__img {
-    width: 50%;
+    width: clamp(20em, 80%, 25em);
     max-width: 400px;
     margin-left: auto;
     margin-right: auto;
