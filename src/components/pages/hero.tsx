@@ -16,17 +16,14 @@ export default function Hero() {
             redes sociais.
           </h3>
 
-          <a href="#services">
-            <Button label="Serviços" />
+          <a href="#how_work">
+            <Button label="KAHS" />
           </a>
         </div>
 
-        {/* <video autoPlay loop muted playsInline className={`${style.hero__img}`} >
-          <source src={heroVideo} type="video/webm" />
-        </video> */}
-
         <div className={style.hero__ellipse} />
         <img className={style.hero__img} src={heroImg} />
+
       </div>
     </section>
   );

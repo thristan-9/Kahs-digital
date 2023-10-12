@@ -11,11 +11,18 @@ export default function HowWork() {
 
   const [dotSelected, setDotSelected] = useState(1);
 
+  function onClickNavDot(dot: number) {
+    setDotSelected(dot);
+    setTimeout(() => {
+      window.scrollTo({ top: window.scrollY - 1, behavior: "instant" })
+    },500);
+  }
+
   return (
-    <section id="services">
+    <section id="how_work">
       <div className={`${style.howWork__container}`}>
         <div className={style.top__container}>
-          <h1 className={style.top__title}>Como a KAHS funciona</h1>
+          <h1 className={`${style.top__title} title`}>Como a KAHS funciona</h1>
           <p className={style.top__description}>
             Traçamos a estrategia de marketing que mais <br /> funciona para o{" "}
             <strong>Seu Tipo de Negócio</strong>
@@ -59,20 +66,18 @@ export default function HowWork() {
           <div className={style.iphone__frame}>
             <img className={style.iphone__frame_img} src={iphone__frame} />
 
-            <div className={style.slider__wrapper}>
-              <div className={style.slider}>
-                <img id="slide-1" className={style.iphone__img} src={iphone__img_1} />
-                <img id="slide-2" className={style.iphone__img} src={iphone__img_2} />
-                <img id="slide-3" className={style.iphone__img} src={iphone__img_3} />
-              </div>
+            <div className={style.slider}>
+              <img id="slide-1" className={style.iphone__img} src={iphone__img_1} />
+              <img id="slide-2" className={style.iphone__img} src={iphone__img_2} />
+              <img id="slide-3" className={style.iphone__img} src={iphone__img_3} />
             </div>
 
           </div>
 
           <div className={style.slider__nav}>
-            <a onClick={() => setDotSelected(1)} className={`${style.slider__nav_dot} ${dotSelected == 1 && style.dot__selected}`} href="#slide-1"></a>
-            <a onClick={() => setDotSelected(2)} className={`${style.slider__nav_dot} ${dotSelected == 2 && style.dot__selected}`} href="#slide-2"></a>
-            <a onClick={() => setDotSelected(3)} className={`${style.slider__nav_dot} ${dotSelected == 3 && style.dot__selected}`} href="#slide-3"></a>
+            <a onClick={() => onClickNavDot(1)} className={`${style.slider__nav_dot} ${dotSelected == 1 && style.dot__selected}`} href="#slide-1"></a>
+            <a onClick={() => onClickNavDot(2)} className={`${style.slider__nav_dot} ${dotSelected == 2 && style.dot__selected}`} href="#slide-2"></a>
+            <a onClick={() => onClickNavDot(3)} className={`${style.slider__nav_dot} ${dotSelected == 3 && style.dot__selected}`} href="#slide-3"></a>
           </div>
         </div>
 

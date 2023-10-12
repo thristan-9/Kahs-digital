@@ -1,0 +1,46 @@
+.service__container {
+    text-align: center;
+    padding-top: 5rem;
+}
+
+.service__img {
+    width: 50%;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    transition: all .3s;
+}
+
+.service_row {
+    margin-top: 5rem;
+    justify-content: space-around;
+    align-content: center;
+    text-align: center;
+}
+
+.invert__row_data {
+    flex-direction: row-reverse;
+}
+
+.service_info {
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    margin-top: 1rem;
+    gap: .5rem;
+}
+
+@media screen and (min-width: 1150px) {
+    .service_row {
+        display: flex;
+    }
+
+    .service_info {
+        width: 50%;
+    }
+
+    .service__img:hover {
+        transform: translateX(+10px) translateY(-10px) rotate(1deg);
+    }
+}

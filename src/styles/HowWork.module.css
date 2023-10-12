@@ -1,5 +1,5 @@
 .howWork__container {
-    padding-top: 3rem;
+    padding-top: 5rem;
     position: relative;
 }
 
@@ -11,7 +11,6 @@
 .top__title {
     margin-bottom: var(--mb-1-5);
     color: var(--light-color);
-    font-size: clamp(2rem, 3vw, 4rem);
 }
 
 .top__description {
@@ -25,7 +24,7 @@
     width: 90%;
     margin-inline: auto;
     gap: 2rem;
-        margin-bottom: 9rem;
+    margin-bottom: 9rem;
 }
 
 .middle__container::before {
@@ -85,24 +84,20 @@
     width: 100%;
 }
 
-.slider__wrapper {
+.slider {
     position: absolute;
     overflow: hidden;
-    height: 82.5vh;
-    width: auto;
-    top: 1%;
-    left: 4.5%;
-    border-radius: 50px;
-}
-
-.slider {
     display: flex;
-    width: 100%;
     gap: 10px;
+    height: 89.5%;
+    width: auto;
+    max-width: 90%;
+    top: 1%;
+    left: 5%;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-    border-radius: 50px;
+    border-radius: 35px;
 }
 
 .slider::-webkit-scrollbar {
@@ -155,8 +150,8 @@
 
 
 @media screen and (min-width: 300px) {
-    .slider__wrapper {
-        height: 92%;
+    .slider {
+        height: 89.5%;
         width: auto;
         max-width: 90%;
         top: 1%;
@@ -170,19 +165,30 @@
     }
 }
 
+@media screen and (min-width: 750px) {
+    .iphone_slide_wrapper {
+        margin-top: -51rem;
+    }
+
+    .bgWhite {
+        height: 45rem;
+    }
+}
+
 @media screen and (min-width: 1150px) {
     .top__container {
         height: 30vh;
     }
 
     .bottom__container {
-        height: 30vh;
+        height: 15vh;
         padding-top: 10rem;
+        padding-block: initial;
     }
 
     .middle__container {
         display: grid;
-        height: 70vh;
+        height: 65vh;
         width: 90%;
         margin-left: auto;
         margin-right: auto;
@@ -229,13 +235,21 @@
         margin-top: initial;
     }
 
-    .slider__wrapper {
+    .slider {
         height: 82.5vh;
+        width: auto;
+        top: 1%;
+        left: 4.8%;
+        border-radius: 45px;
     }
 }
 
 @media screen and (min-width: 1600px) {
     .iphone_slide_wrapper {
         top: 26vh;
+    }
+
+    .slider {
+        border-radius: 55px;
     }
 }

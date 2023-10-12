@@ -1,4 +1,8 @@
-let people01, people02, people03, facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star = 0;
+let facebook, instagram, linkedin, twitter, airbnb, binance, coinbase, dropbox, send, shield, star = 0;
+import img1 from "../assets/services_1.png";
+import img2 from "../assets/services_2.png";
+import img3 from "../assets/services_3.png";
+import img4 from "../assets/services_4.png";
 
 export const navLinks = [
     {
@@ -19,50 +23,33 @@ export const navLinks = [
     },
 ];
 
-export const feedback = [
+export const services = [
     {
-        id: "feedback-1",
-        content:
-            "Money is only a tool. It will take you wherever you wish, but it will not replace you as the driver.",
-        name: "Herman Jensen",
-        title: "Founder & Leader",
-        img: people01,
+        id: "services-1",
+        title: "Estrategias de Midias Sociais",
+        content: "Desenvolvemos estrategias efetivas para otimizar sua presensa nas midia sociais e engajamento.",
+        img: img1,
     },
     {
-        id: "feedback-2",
-        content:
-            "Money makes your life easier. If you're lucky to have it, you're lucky.",
-        name: "Steve Mark",
-        title: "Founder & Leader",
-        img: people02,
+        id: "services-2",
+        title: "Criacao de Conteudo",
+        content: "Criamos conteudos impactantes que se conecta com o seu publico alvo.",
+        img: img2,
     },
     {
-        id: "feedback-3",
-        content:
-            "It is usually people in the money business, finance, and international trade that are really rich.",
-        name: "Kenn Gallagher",
-        title: "Founder & Leader",
-        img: people03,
+        id: "services-3",
+        title: "Tráfego Pago",
+        content: "Desenvolvemos estrategias efetivas para otimizar sua presensa de social media e engajamento.",
+        img: img3,
+    },
+    {
+        id: "services-4",
+        title: "Identidade Visual",
+        content: "Criamos conteudos impactantes que se conecta com o seu publico alvo.",
+        img: img4,
     },
 ];
 
-export const stats = [
-    {
-        id: "stats-1",
-        title: "User Active",
-        value: "3800+",
-    },
-    {
-        id: "stats-2",
-        title: "Trusted by Company",
-        value: "230+",
-    },
-    {
-        id: "stats-3",
-        title: "Transaction",
-        value: "$230M+",
-    },
-];
 
 export const footerLinks = [
     {
@@ -153,21 +140,17 @@ export const socialMedia = [
     },
 ];
 
-export const clients = [
+export const reviews = [
     {
         id: "client-1",
-        logo: airbnb,
+        title: "",
+        description: "",
+        img: airbnb,
     },
     {
         id: "client-2",
-        logo: binance,
-    },
-    {
-        id: "client-3",
-        logo: coinbase,
-    },
-    {
-        id: "client-4",
-        logo: dropbox,
+        title: "",
+        description: "",
+        img: airbnb,
     },
 ];

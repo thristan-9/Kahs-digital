@@ -1,0 +1,8 @@
+.reviews__container {
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.reviews__title {
+    color: var(--light-color);
+}

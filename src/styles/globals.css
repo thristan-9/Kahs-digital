@@ -151,16 +151,29 @@ img {
     display: grid;
 }
 
+.title {
+    font-size: clamp(2rem, 3vw, 4rem);
+}
+
 .icon {
     cursor: pointer;
     font-size: var(--h1-font-size);
 }
 
-.bgContainer {
+.bg__container {
     width: 100%;
     background-color: var(--light-color);
     min-height: var(--header-height);
     padding-bottom: clamp(5rem, 10%, 10rem);
+    border-radius: 40px;
+}
+
+.bg__top_container {
+    /* width: 100%;
+    background-color: var(--light-color);
+    min-height: var(--header-height);
+    padding-bottom: clamp(5rem, 10%, 10rem); */
+    border-radius: 0;
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
 }
