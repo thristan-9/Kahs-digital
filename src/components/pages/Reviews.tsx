@@ -18,7 +18,7 @@ export default function Reviews() {
             blobRef.current.animate({
                 left: `${mousePositionVerified.x}px`,
                 top: `${mousePositionVerified.y}px`
-            }, {duration: 3000, fill: "forwards"})
+            }, {duration: 10000, fill: "forwards"})
         }
     }
 
@@ -45,16 +45,19 @@ export default function Reviews() {
     }
 
     return (
-        <section onMouseMove={() => moveBlob()} id="reviews">
+        <section id="reviews">
             
-            <div className={`${style.reviews__container}`}>
+            <div onMouseMove={() => moveBlob()} className={`${style.reviews__container}`}>
 
                 <h1 className={`${style.reviews__title} title`}>Feedbacks</h1>
 
-                <div className={`${style.reviews__data}`}>
-                
-                    <div ref={blobRef} className={`${style.blob}`}></div>
+                <div ref={blobRef} className={`${style.blob}`} />
 
+                <div className={`${style.reviews__data} grid`}>    
+                    <div>1</div>
+                    <div>2</div>
+                    <div>3</div>
+                    <div>4</div>
 
                     {/* {reviews.map((item, index) => {
                         return (
