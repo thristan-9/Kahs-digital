@@ -39,24 +39,25 @@ export default function HowWork() {
             </p>
           </div>
 
-          <div className={style.middle__box}>
-            <span className="material-icons-outlined icon">business</span>
-            <p className={style.box__text}>Padronizacao da identidade</p>
-            <p className={style.box__text}>visual da marca</p>
+          <div className={`${style.middle__box} ${style.box__2}`}>
+            <span className="material-icons-outlined icon">insights</span>
+            <p className={style.box__text}>Marketing estratégico para crescimento nas redes</p>
+            <p className={style.box__text}>sociais, visando <strong>Objetivos do Cliente</strong></p>
           </div>
+
 
           <div className={`${style.middle__box} ${style.box__2}`}>
             <span className="material-icons-outlined icon">add</span>
-            <p className={style.box__text}>de 30 mil visualizacoes</p>
-            <p className={style.box__text}>no primeiro mes</p>
+            <p className={style.box__text}>Apresenta resultados positivos já no primeiro</p>
+            <p className={style.box__text}>mês de serviço, com <strong>Relatórios Semanais</strong></p>
           </div>
 
-          <div className={`${style.middle__box} ${style.box__2}`}>
-            <span className="material-icons-outlined icon">insights</span>
-            <p className={style.box__text}>Analise de dados detalhada sobre</p>
-            <p className={style.box__text}>os conteudos postados</p>
+          <div className={style.middle__box}>
+            <span className="material-icons-outlined icon">business</span>
+            <p className={style.box__text}>Padronizacao da identidade</p>
+            <p className={style.box__text}><strong>Visual da Marca</strong></p>
           </div>
-
+        
         </div>
 
         <div className={`${style.bgWhite}`}></div>

@@ -17,6 +17,7 @@
 .home__description {
   margin-bottom: var(--mb-1-5);
   font-size: clamp(1rem, 1vw, 1.5rem);
+  opacity: .6;
 }
 
 .hero__img {

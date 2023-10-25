@@ -1,38 +1,201 @@
-.reviews__container {
-    text-align: center;
-    height: 100vh;
+.reviews {
     position: relative;
 }
 
-.reviews__title {
+.reviews__container {
+    text-align: center;
+    padding-block: 5rem;
+}
+
+.text__light_color {
     color: var(--light-color);
-    margin-top: 5rem;
 }
 
 .reviews__data {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 5rem;
+    max-width: 400px;
+    gap: 25px
 }
 
-/* .blur {
-    position: absolute;
-    height: 120%;
+.review__wrap {
+    gap: 25px;
+    display: none;
+}
+
+.review__item,
+.review__item_small,
+.logos__wrapper,
+.square {
+    background-color: #000000;
+    border-radius: 15px;
+    z-index: var(--z-tooltip);
+    border: .09rem solid rgba(255, 255, 255, .1);
+    padding: 1.5rem
+}
+
+.review__item_small {
+    padding: 1rem;
+    padding-inline: 1.5rem;
+    max-height: 150.5px;
+    min-height: 4rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.logos__wrapper {
+    position: relative;
+    overflow: hidden;
     width: 100%;
-    z-index: 2;
-    backdrop-filter: blur(200px);
-} */
+    height: 100%;
+    display: grid;
+    align-items: center;
+    padding: .5rem;
+    max-height: 150.5px;
+    min-height: 4rem;
+}
+
+.logos__wrapper::before {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100%;
+    background: linear-gradient(to left,rgba(255, 255, 255, 0), #000000);
+    z-index: var(--z-tooltip);
+}
+
+.logos__wrapper::after {
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    width: 100px;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #000000);
+    z-index: var(--z-tooltip);
+}
+
+.logos {
+    display: flex;
+    white-space: nowrap;
+    position: absolute;
+    width: max-content;
+    column-gap: 2rem;
+}
+
+.slider {
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    align-items: center;
+    animation: 20s slide infinite linear;
+    column-gap: 2rem;
+}
+
+.logos__wrapper:hover .slider {
+    animation-play-state: paused;
+}
+
+@keyframes slide {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+.slider img {
+    height: 1.5rem;
+}
+
+.review__header {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    justify-content: space-evenly;
+}
+
+.review__data {
+    text-align: left;
+    gap: 5px;
+}
+
+.business, .business__small {
+    opacity: .6;
+}
+
+.feedback {
+    text-wrap: initial
+}
+
+.client__img,
+.client__img_small {
+    border-radius: 100%;
+    width: 30%;
+    max-width: 190px;
+    border: solid #5ED5F8 3px;
+}
+
+.square__wrapper {
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.square {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.square__number {
+    font-size: 2rem;
+    color: var(--light-color);
+}
+
+.square__text {
+    font-size: 1rem;
+    color: var(--light-color);
+    opacity: 0.6;
+}
+
+.square__icon {
+    font-size: 1.5rem;
+}
+
+.review__body {
+    text-align: center;
+    margin-top: 1.5rem;
+}
+
+.brand__wrapper {
+    display: none;
+    gap: 25px;
+}
 
 .blob {
     position: absolute;
-    /* background-color: #b62899; */
-    background: linear-gradient(#b62899 0%,  #a84ddf 100%);
-    height: 400px;
+    /* background-color: #a84ddf; */
+    background: linear-gradient(#b62899 0%, #a84ddf 100%);
+    height: 30%;
     aspect-ratio: 1;
     border-radius: 50%;
     left: 50%;
     top: 50%;
     translate: -50% -50%;
-    animation: rotate 20s infinite;
-    filter: blur(180px);
+    animation: rotate 15s infinite linear;
+    filter: blur(9rem);
+}
+
+.show {
+    display: grid;
 }
 
 @keyframes rotate {
@@ -40,15 +203,144 @@
         rotate: 0deg;
     }
 
+    50% {
+        scale: 1 1.25;
+    }
+
     to {
         rotate: 360deg;
     }
 }
 
-/* @media screen and (min-width: 1150px) {
+@media screen and (min-width: 1150px) {
+    .review__item_small {
+        min-height: initial;
+    }
 
+    .reviews__data {
+        grid-template-columns: 1fr 1fr;
+        max-width: none;
+    }
+
+    .review__item {
+        padding: 2rem;
+    }
+
+    .review__header {
+        justify-content: center;
+        gap: 2.5rem;
+    }
+
+    .review__body {
+        margin-top: 3rem;
+    }
+
+    .blob {
+        height: 45%;
+        filter: blur(11rem);
+    }
+
+    .client__img {
+        width: 40%;
+    }
+
+    .slider img {
+        height: 2.5rem;
+    }
+
+    .client__img_small {
+        width: auto;
+        height: 70%;
+    }
+
+    .name {
+        font-size: 1.25rem;
+    }
+
+    .business {
+        font-size: 1rem;
+    }
+
+    .feedback {
+        font-size: .85rem;
+    }
+
+    .name__small {
+        font-size: 1rem;
+    }
+
+    .business__small {
+        font-size: .85rem;
+    }
+
+    .feedback__small {
+        font-size: .70rem;
+    }
+
+    .review__wrap,
+    .brand__wrapper {
+        display: grid;
+    }
+
+    .square__number {
+        font-size: 3rem;
+    }
+
+    .square__text {
+        font-size: 1.5rem;
+    }
+
+    .square__icon {
+        font-size: 2rem;
+    }
+
+    .show {
+        display: none;
+    }
+
+    .blob {
+        animation: rotate 18s infinite;
+    }
 }
 
-@media screen and (min-width: 1550px) {
-    
-} */
+@media screen and (min-width: 1750px) {
+    .reviews {
+        height: 100vh;
+    }
+
+    /* .name,
+    .business,
+    .feedback {
+        font-size: initial;
+    } */
+
+    .name__small {
+        font-size: 1.5rem;
+    }
+
+    .business__small {
+        font-size: 1.2rem;
+    }
+
+    .feedback__small {
+        font-size: 1rem;
+    }
+
+    .review__item {
+        max-height: 430px;
+        min-width: 250px;
+        padding: 3rem;
+    }
+
+    .square__number {
+        font-size: 5rem;
+    }
+
+    .square__text {
+        font-size: 2rem;
+    }
+
+    .square__icon {
+        font-size: 3rem;
+    }
+}

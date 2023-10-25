@@ -17,7 +17,7 @@ export default function Hero() {
           </h3>
 
           <a href="#how_work">
-            <Button label="KAHS" />
+            <Button label="Serviço" />
           </a>
         </div>
 
