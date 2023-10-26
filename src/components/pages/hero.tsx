@@ -4,14 +4,14 @@ import Button from "../Button";
 
 export default function Hero() {
   return (
-    <section id="home" className={style.hero}>
-      <div className={`${style.home__container} container grid`}>
-        <div className={`${style.home__data}`}>
-          <h1 className={`${style.home__title}`}>
+    <section id="hero" className={style.hero}>
+      <div className={`${style.hero__container} container grid`}>
+        <div className={`${style.hero__data}`}>
+          <h1 className={`${style.hero__title}`}>
             Gerenciamento <br /> de Midias <br />{" "}
             <span className={`text__gradient`}>Sociais</span>
           </h1>
-          <h3 className={`${style.home__description}`}>
+          <h3 className={`${style.hero__description}`}>
             Aumente sua visibilidade e conquiste <br /> resultados reais nas
             redes sociais.
           </h3>

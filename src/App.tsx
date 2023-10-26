@@ -4,6 +4,7 @@ import About from './components/pages/About';
 import HowWork from './components/pages/HowWork';
 import Services from './components/pages/Services';
 import Reviews from './components/pages/Reviews';
+import Faqs from './components/pages/Faqs';
 
 
 
@@ -20,6 +21,9 @@ const App = () => (
         <Services />
       </div>
       <Reviews />
+      <div className="bg__container">
+        <Faqs />
+      </div>
     </main>
   </div>
 )

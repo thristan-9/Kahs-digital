@@ -1,20 +1,20 @@
-.home__container {
+.hero__container {
   height: 100vh;
   position: relative;
 }
 
-.home__data {
+.hero__data {
   margin-top: 2rem;
   text-align: center;
   z-index: var(--z-tooltip);
 }
 
-.home__title {
+.hero__title {
   margin-bottom: var(--mb-1-5);
   font-size: clamp(2.5rem, 4vw, 5rem);
 }
 
-.home__description {
+.hero__description {
   margin-bottom: var(--mb-1-5);
   font-size: clamp(1rem, 1vw, 1.5rem);
   opacity: .6;
@@ -43,7 +43,7 @@
 }
 
 @media screen and (min-width: 300px) {
-  .home__container {
+  .hero__container {
     padding-top: var(--header-height);
   }
 
@@ -64,14 +64,14 @@
 }
 
 @media screen and (min-width: 1150px) {
-  .home__container {
+  .hero__container {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     position: relative;
     padding: 0;
   }
 
-  .home__data {
+  .hero__data {
     margin-top: initial;
     text-align: left;
   }

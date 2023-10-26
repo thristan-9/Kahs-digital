@@ -174,7 +174,7 @@ export const client__3 = {
 export const client__4 = {
     id: "client-4",
     name: "Ana Laura Lopes",
-    business: "Manicure",
+    business: "Nail designer",
     feedback: "Admiro muito a sua dedicação e o seu trabalho. Uma excelente profissional, indico de olhos fechados.",
     img: client__img_4,
 };

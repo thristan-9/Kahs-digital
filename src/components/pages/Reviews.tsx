@@ -1,6 +1,7 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import style from "../../styles/Reviews.module.css";
 import MousePosition from "../MousePosition";
+import CountUp from "../CountUp";
 import { client__1, client__2, client__3, client__4, client__logos } from "../../constants";
 
 
@@ -8,6 +9,7 @@ export default function Reviews() {
 
     const mousePosition = MousePosition();
     const blobRef = useRef<HTMLDivElement>(null);
+    const [showCountUp, setShowCountUp] = useState(false);
 
     function moveBlob() {
         if (window.innerWidth < 1150) return;
@@ -48,7 +50,7 @@ export default function Reviews() {
     }
 
     return (
-        <section onMouseMove={() => moveBlob()} className={style.reviews} id="reviews">
+        <section onMouseEnter={() => setShowCountUp(true)} onMouseMove={() => moveBlob()} className={style.reviews} id="reviews">
 
             <div className={`${style.reviews__container} container`}>
 
@@ -126,7 +128,8 @@ export default function Reviews() {
                             <div className={`${style.square}`}>
                                 <div>
                                     <p className={style.square__number}>
-                                        5 mil<span className={`material-icons-outlined ${style.square__icon}`}>add</span>
+                                        {showCountUp ? <CountUp timer={15} end={1050}/> : 0} 
+                                        <span className={`material-icons-outlined ${style.square__icon}`}>add</span>
                                     </p>
                                     <p className={style.square__text}>Visualizaçoes Organicas</p>
                                 </div>
@@ -135,7 +138,8 @@ export default function Reviews() {
                             <div className={`${style.square}`}>
                                 <div>
                                     <p className={style.square__number}>
-                                        1 mil<span className={`material-icons-outlined ${style.square__icon}`}>add</span>
+                                        {showCountUp ? <CountUp timer={25} end={100} /> : 0}
+                                        <span className={`material-icons-outlined ${style.square__icon}`}>add</span>
                                     </p>
                                     <p className={style.square__text}>Posts Feitos</p>
                                 </div>
@@ -145,20 +149,20 @@ export default function Reviews() {
                         <div className={style.logos__wrapper}>
                             <div className={`${style.logos}`}>
                                 <div className={`${style.slider}`}>
-                                    {client__logos.map((imgSource) => {
+                                    {client__logos.map((imgSource, index) => {
                                         return (
-                                            <>
+                                            <div key={index}>
                                                 <img src={imgSource} />
-                                            </>
+                                            </div>
                                         )
                                     })}
                                 </div>
                                 <div className={`${style.slider}`}>
-                                    {client__logos.map((imgSource) => {
+                                    {client__logos.map((imgSource, index) => {
                                         return (
-                                            <>
+                                            <div key={index}>
                                                 <img src={imgSource} />
-                                            </>
+                                            </div>
                                         )
                                     })}
                                 </div>
@@ -185,7 +189,8 @@ export default function Reviews() {
                             <div className={`${style.square}`}>
                                 <div>
                                     <p className={style.square__number}>
-                                        5 mil<span className={`material-icons-outlined ${style.square__icon}`}>add</span>
+                                        <CountUp timer={15} end={1050} />
+                                        <span className={`material-icons-outlined ${style.square__icon}`}>add</span>
                                     </p>
                                     <p className={style.square__text}>Visualizaçoes Organicas</p>
                                 </div>
@@ -194,7 +199,8 @@ export default function Reviews() {
                             <div className={`${style.square}`}>
                                 <div>
                                     <p className={style.square__number}>
-                                        1 mil<span className={`material-icons-outlined ${style.square__icon}`}>add</span>
+                                        <CountUp timer={25} end={100} />
+                                        <span className={`material-icons-outlined ${style.square__icon}`}>add</span>
                                     </p>
                                     <p className={style.square__text}>Posts Feitos</p>
                                 </div>
@@ -204,20 +210,20 @@ export default function Reviews() {
                         <div className={style.logos__wrapper}>
                             <div className={`${style.logos}`}>
                                 <div className={`${style.slider}`}>
-                                    {client__logos.map((imgSource) => {
+                                    {client__logos.map((imgSource, index) => {
                                         return (
-                                            <>
+                                            <div key={index}>
                                                 <img src={imgSource} />
-                                            </>
+                                            </div>
                                         )
                                     })}
                                 </div>
                                 <div className={`${style.slider}`}>
-                                    {client__logos.map((imgSource) => {
+                                    {client__logos.map((imgSource, index) => {
                                         return (
-                                            <>
+                                            <div key={index}>
                                                 <img src={imgSource} />
-                                            </>
+                                            </div>
                                         )
                                     })}
                                 </div>
