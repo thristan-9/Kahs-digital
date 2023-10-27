@@ -188,3 +188,18 @@ export const client__logos = [
     logo__5,
     logo__6,
 ];
+
+export const faqs = [
+    {
+        question: "question 1",
+        answer: "Elit tempor eiusmod dolor sit. Fugiat quis commodo irure sit proident voluptate pariatur adipisicing. Duis ea mollit esse nul"
+    },
+    {
+        question: "question 2",
+        answer: "Elit tempor eiusmod dolor sit. Fugiat quis commodo irure sit proident voluptate pariatur adipisicing. Duis ea mollit esse nul"
+    },
+    {
+        question: "question 3",
+        answer: "Elit tempor eiusmod dolor sit. Fugiat quis commodo irure sit proident voluptate pariatur adipisicing. Duis ea mollit esse nul"
+    },
+]

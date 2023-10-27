@@ -217,7 +217,7 @@
     }
 
     .reviews__container {
-        padding-bottom: 10rem;
+        margin-bottom: 10rem;
     }
 
     .reviews__data {
@@ -240,7 +240,7 @@
 
     .blob {
         height: 45%;
-        filter: blur(11rem);
+        filter: blur(10rem);
     }
 
     .client__img {
@@ -302,6 +302,7 @@
     }
 }
 
+
 @media screen and (min-width: 1750px) {
 
     .name {
@@ -345,5 +346,15 @@
 
     .square__icon {
         font-size: 3rem;
+    }
+}
+
+@media screen and (min-width: 2250px) {
+    .reviews {
+        height: 105vh;
+    }
+
+    .reviews__data {
+        margin-top: 10vh;
     }
 }

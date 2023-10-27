@@ -222,7 +222,7 @@ img {
 /* For large devices */
 @media screen and (min-width: 1150px) {
     .container {
-        max-width: clamp(800px, 60%, 1300px);
+        max-width: clamp(800px, 60%, 1400px);
         margin-left: auto;
         margin-right: auto;
     }

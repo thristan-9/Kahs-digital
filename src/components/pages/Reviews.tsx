@@ -31,8 +31,8 @@ export default function Reviews() {
         const minX = (width / 2) - 120;
         const maxX = (width / 2) + 120;
 
-        const minY = (height / 2) - 50;
-        const maxY = (height / 2) + 50;
+        const minY = (height / 2) - 10;
+        const maxY = (height / 2) + 70;
 
         if (mousePosition.x <= minX) {
             mousePosition.x = minX;
@@ -52,11 +52,11 @@ export default function Reviews() {
     return (
         <section onMouseEnter={() => setShowCountUp(true)} onMouseMove={() => moveBlob()} className={style.reviews} id="reviews">
 
+            <div ref={blobRef} className={`${style.blob}`} />
+
             <div className={`${style.reviews__container} container`}>
 
                 <h1 className={`${style.text__light_color} title`}>Feedbacks</h1>
-
-                <div ref={blobRef} className={`${style.blob}`} />
 
                 <div className={`${style.reviews__data} grid`}>
 
