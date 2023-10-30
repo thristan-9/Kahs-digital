@@ -4,19 +4,34 @@ import { faqs } from "../../constants";
 
 export default function Faqs() {
 
-    const refSlide = useRef([]);
+    const dotRef1 = useRef(null);
+    const dotRef2 = useRef(null);
+    const dotRef3 = useRef(null);
 
-    function moveLeft() {
-        if (refSlide?.current) {
-            console.log("refSlide.current.index", refSlide.current.key)
-        }
-    }
+    function move(direction) {
+        const currentUrl = window.location.href;
+        const questionSelected = currentUrl.split('#')[1];
 
-    function moveRight() {
-        if (refSlide?.current) {
-            const index = refSlide.current;
-            console.log("index", index)
+        switch (questionSelected) {
+            case "faqs-slide-1":
+                if (direction == "right" && dotRef2?.current) {
+                    dotRef2.current.click();
+                }
+            break;
+            case "faqs-slide-2":
+                if (direction == "right" && dotRef3?.current) {
+                    dotRef3.current.click();
+                } else {
+                    dotRef1.current.click();
+                }
+            break;
+            case "faqs-slide-3":
+                if (direction == "left" && dotRef2?.current) {
+                    dotRef2.current.click();
+                }
+            break;
         }
+        
     }
 
     return (
@@ -25,11 +40,11 @@ export default function Faqs() {
                 
                 <div className={`${style.faqs__data}`}>
 
-                    <div onClick={() => moveLeft()} className={`${style.icon__wrapper} ${style.icon__left}`}>
+                    <div onClick={() => move("left")} className={`${style.icon__wrapper} ${style.icon__left}`}>
                         <span className={`material-icons-outlined icon ` + style.faqs__icon}>arrow_back_ios</span>
                     </div>
 
-                    <div onClick={()=> moveRight()} className={`${style.icon__wrapper} ${style.icon__right}`}>
+                    <div onClick={() => move("right")} className={`${style.icon__wrapper} ${style.icon__right}`}>
                         <span className={`material-icons-outlined icon ` + style.faqs__icon}>arrow_forward_ios</span>
                     </div>
 
@@ -37,7 +52,7 @@ export default function Faqs() {
                         <ul>
                             {faqs.map((item, index) => {
                                 return (
-                                    <li ref={el => refSlide.current[index] = el} id={"faqs-slide-" + (index + 1)} key={index}>
+                                    <li id={"faqs-slide-" + (index + 1)} key={index}>
                                         <h1 className={style.slide__title}>
                                             {item.question}
                                         </h1>
@@ -53,9 +68,9 @@ export default function Faqs() {
                     </div>
                     
                     <div className={style.dots}>
-                        <a className={style.dot} href="#faqs-slide-1"></a>
-                        <a className={style.dot} href="#faqs-slide-2"></a>
-                        <a className={style.dot} href="#faqs-slide-3"></a>
+                        <a ref={dotRef1} className={style.dot} href="#faqs-slide-1"></a>
+                        <a ref={dotRef2} className={style.dot} href="#faqs-slide-2"></a>
+                        <a ref={dotRef3} className={style.dot} href="#faqs-slide-3"></a>
                     </div>
 
                 </div>
