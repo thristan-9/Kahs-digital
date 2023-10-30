@@ -1,21 +1,18 @@
+.faqs__container {
+    padding-top: 5rem;
+}
+
 .faqs__data {
     position: relative;
 }
 
 .slider {
-    display: grid;
-    grid-auto-flow: column;
-    scroll-snap-type: x mandatory;
-    width: 40rem;
-    height: 20rem;
+    position: relative;
+    margin: 0 auto 0 auto;
     background-color: var(--dark-color);
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
-    margin-top: 10rem;
-    margin-left: auto;
-    margin-right: auto;
     border-radius: 40px;
-    overflow-y: hidden;
-    overflow-x: auto;
+    overflow: hidden;
     scroll-behavior: smooth;
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -25,16 +22,37 @@
     display: none;
 }
 
-.slide {
-    scroll-snap-align: start;
-    width: 40rem;
-    height: 20rem;
-    text-align: center;
+.slider ul {
     display: grid;
+    grid-auto-flow: column;
+    overflow: hidden;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    height: 25rem;
+    width: 300%;
+    list-style: none;
+}
+
+.slider ul li {
+    position: relative;
+    width: 100%;
+    height: 25rem;
+    text-align: center;
+    padding: 1rem;
 }
 
 .slide__title {
     color: var(--light-color);
+}
+
+.slide__description_center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80%;
+    margin: auto;
 }
 
 .slide__description {
@@ -70,12 +88,20 @@
     background-color: #606060;
 }
 
-/* .icon__wrapper {
-    background-color: var(--dark-color);
-    border-radius: 50%;
-    width: 3rem;
-    height: 3rem;
-} */
+.icon__wrapper {
+    position: absolute;
+    top: 50%;
+    z-index: 10;
+    display: none;
+}
+
+.icon__left {
+    left: 10px
+}
+
+.icon__right {
+    right: 10px
+}
 
 .faqs__icon {
     color: var(--light-color);
@@ -83,18 +109,43 @@
 
 @media screen and (min-width: 1150px) {
 
-    .slider {
-        max-width: 80rem;
-        width: 80rem;
-        height: 40rem;
-        gap: 1rem;
+    .icon__wrapper {
+        display: initial;
     }
 
-    .slide {
-        width: 80rem;
-        height: 40rem;
+    .faqs__container {
+        padding-top: 10rem;
+    }
+
+    .slider ul {
+        height: 30rem;
+    }
+
+    .slider ul li {
+        width: 100%;
+        height: 30rem;
         padding: 5rem;
         padding-inline: 10rem;
+    }
+
+    .icon__left {
+        left: 2rem
+    }
+
+    .icon__right {
+        right: 2rem
+    }
+
+}
+
+@media screen and (min-width: 1750px) {
+
+    .slider ul {
+        height: 35rem;
+    }
+
+    .slider ul li {
+        height: 35rem;
     }
 
 }
