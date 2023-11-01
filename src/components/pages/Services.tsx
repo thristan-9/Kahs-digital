@@ -9,19 +9,16 @@ export default function Services() {
 
                 <h1 className={`title`}>Serviços</h1>
 
-                <div className={`${style.services__data}`}>
+                <div className={`${style.services__data} grid`}>
 
                     {services.map((item, index) => {
                         return (
-                            <div key={index} className={`${style.service_row} ${index & 1 ? style.invert__row_data : ""}`}>
-
-                                <img className={`${style.service__img}`} src={item.img} />
-
-                                <div className={`${style.service_info} grid`}>
-                                    <h2>
+                            <div key={index} className={`${style.card} ${index & 1 && style.right__card}`}>
+                                <div className={`${style.card__content} grid`}>
+                                    <h1 className={`light__text`}>
                                         {item.title}
-                                    </h2>
-                                    <p className={`${style.service__description}`}>
+                                    </h1>
+                                    <p className={`${style.service__description} light__text`}>
                                         {item.content}
                                     </p>
                                 </div>

@@ -27,15 +27,6 @@
     margin-bottom: 9rem;
 }
 
-.middle__container::before {
-    content: "";
-    width: 70%;
-    background-color: var(--light-color);
-    height: 1px;
-    margin-inline: auto;
-    border-radius: 50px;
-}
-
 .middle__box {
     display: grid;
     justify-content: center;
@@ -196,10 +187,6 @@
         grid-column-gap: 30%;
         background-color: var(--light-color);
         border-radius: 40px;
-    }
-
-    .middle__container::before {
-        content: none
     }
 
     .middle__box {

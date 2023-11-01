@@ -3,49 +3,104 @@
     padding-top: 5rem;
 }
 
-.service__img {
-    width: clamp(15em, 35%, 25em);
-    max-width: 400px;
-    margin-left: auto;
-    margin-right: auto;
-    transition: all .3s;
-}
-
-.service_row {
+.services__data {
+    gap: 3rem;
     margin-top: 5rem;
-    justify-content: space-around;
-    align-content: center;
-    text-align: center;
 }
 
-.invert__row_data {
-    flex-direction: row-reverse;
-}
-
-.service_info {
+.card {
     width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: #101010;
+    border: .09rem solid rgba(255, 255, 255, .1);
+    border-radius: 40px;
+    padding: 1rem;
+    box-shadow: var(--box-shadow);
+}
+
+.card:after {
+    content: "";
+    height: 70px;
+    width: 1px;
+    position: absolute;
+    left: -1px;
+    top: 65%;
+    transition: top, opacity;
+    transition-duration: 600ms;
+    transition-timing-function: ease;
+    background: linear-gradient(transparent,
+            #b62899,
+            transparent);
+    opacity: 0;
+}
+
+.card:after {
+    top: 25%;
+    opacity: 1;
+}
+
+.card__content {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
     justify-content: center;
-    align-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.16) 1px,
+            transparent 1px);
+    background-position: 50% 50%;
+    background-size: 1.1rem 1.1rem;
+    padding: 2rem;
+    border-radius: 2rem;
+    overflow: hidden;
     text-align: center;
-    margin-top: 1rem;
-    gap: .8rem;
+}
+
+.service__description {
+    opacity: .8;
 }
 
 @media screen and (min-width: 1150px) {
-    .service_row {
-        display: flex;
+    .services__data {
+        grid-template-columns: 1fr 1fr;
     }
 
-    .service_info {
-        width: 50%;
-    }
-
-    .service__img:hover {
-        transform: translateX(+10px) translateY(-10px) rotate(1deg);
-    }
-
-    .service__description {
+    .card {
+        width: auto;
         max-width: 500px;
-        margin-inline: auto;
+        margin-right: 0;
+        margin-left: auto;
+        transition: .3s;
+    }
+
+    .card:hover {
+        transform: translatey(-7px);
+    }
+
+    .card:after {
+        top: 65%;
+        opacity: 0;
+    }
+
+    .card:hover:after {
+        top: 25%;
+        opacity: 1;
+    }
+
+    .card__content {
+        padding: 3rem;
+    }
+
+    .right__card {
+        margin-left: 0;
+        margin-right: auto;
+    }
+
+}
+
+@media screen and (min-width: 1750px) {
+    .card__content {
+        padding: 4rem;
     }
 }

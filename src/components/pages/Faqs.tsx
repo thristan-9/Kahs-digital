@@ -30,6 +30,11 @@ export default function Faqs() {
                     dotRef2.current.click();
                 }
             break;
+            case undefined:
+                if (direction == "right" && dotRef2?.current) {
+                    dotRef2.current.click();
+                }
+            break;
         }
         
     }

@@ -38,94 +38,24 @@ export const services = [
         id: "services-1",
         title: "Estrategias de Midias Sociais",
         content: "Desenvolvemos estrategias efetivas para otimizar sua presensa nas midia sociais, engajar seguidores, promover produtos ou serviços e aumentar o reconhecimento da marca.",
-        img: img1,
     },
     {
         id: "services-2",
         title: "Criacao de Conteudo",
         content: "Criamos conteudos impactantes que se conecta com o seu publico alvo como textos, imagens e vídeos que sejam relevantes e valiosos para a sua audiência.",
-        img: img2,
     },
     {
         id: "services-3",
         title: "Tráfego Pago",
         content: "Consiste em investir em publicidade para direcionar visitantes para um site ou perfil nas redes sociais, em vez de depender apenas do tráfego orgânico.",
-        img: img3,
     },
     {
         id: "services-4",
         title: "Identidade Visual",
         content: "Cuidadosamente criamos um conjunto de elementos visuais(Logo, Cores, Tipografia, Estilo Gráfico) para sua empresa, tudo projetado para transmitir a personalidade, os valores e a menssagem da sua marca de forma consistente e reconhecível",
-        img: img4,
     },
 ];
 
-
-export const footerLinks = [
-    {
-        title: "Useful Links",
-        links: [
-            {
-                name: "Content",
-                link: "https://www.hoobank.com/content/",
-            },
-            {
-                name: "How it Works",
-                link: "https://www.hoobank.com/how-it-works/",
-            },
-            {
-                name: "Create",
-                link: "https://www.hoobank.com/create/",
-            },
-            {
-                name: "Explore",
-                link: "https://www.hoobank.com/explore/",
-            },
-            {
-                name: "Terms & Services",
-                link: "https://www.hoobank.com/terms-and-services/",
-            },
-        ],
-    },
-    {
-        title: "Community",
-        links: [
-            {
-                name: "Help Center",
-                link: "https://www.hoobank.com/help-center/",
-            },
-            {
-                name: "Partners",
-                link: "https://www.hoobank.com/partners/",
-            },
-            {
-                name: "Suggestions",
-                link: "https://www.hoobank.com/suggestions/",
-            },
-            {
-                name: "Blog",
-                link: "https://www.hoobank.com/blog/",
-            },
-            {
-                name: "Newsletters",
-                link: "https://www.hoobank.com/newsletters/",
-            },
-        ],
-    },
-    {
-        title: "Partner",
-        links: [
-            {
-                name: "Our Partner",
-                link: "https://www.hoobank.com/our-partner/",
-            },
-            {
-                name: "Become a Partner",
-                link: "https://www.hoobank.com/become-a-partner/",
-            },
-        ],
-    },
-];
 
 export const socialMedia = [
     {

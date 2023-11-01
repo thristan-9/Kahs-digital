@@ -35,6 +35,8 @@
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
 
+    --box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+
     /*========== Font and typography ==========*/
     /*.5rem = 8px | 1rem = 16px ...*/
     --big-font-size: 2rem;
@@ -157,6 +159,10 @@ img {
 .icon {
     cursor: pointer;
     font-size: var(--h1-font-size);
+}
+
+.light__text {
+    color: var(--light-color);
 }
 
 .bg__container {
