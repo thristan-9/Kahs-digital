@@ -1,6 +1,8 @@
 import style from "../../styles/Hero.module.css";
 import heroImg from "../../assets/hero__img.png";
 import Button from "../Button";
+import { AiOutlineInstagram, AiOutlineLinkedin, AiOutlineWhatsApp } from 'react-icons/ai';
+
 
 export default function Hero() {
   return (
@@ -16,9 +18,21 @@ export default function Hero() {
             redes sociais.
           </h3>
 
-          <a href="#how_work">
-            <Button label="Serviço" />
-          </a>
+          <div className={`${style.buttons__wrapper}`}>
+            <a href="#how_work">
+              <Button label="Serviços" />
+            </a>
+
+            <div className={`${style.icons__wrapper}`}>
+              <AiOutlineInstagram className={`${style.hero__icon}`} />
+
+              <AiOutlineLinkedin className={`${style.hero__icon}`} />
+            
+              <AiOutlineWhatsApp className={`${style.hero__icon}`} />
+            </div>
+        
+          </div>
+
         </div>
 
         <div className={style.hero__ellipse} />

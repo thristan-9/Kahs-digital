@@ -1,0 +1,24 @@
+.scrollUp__icon {
+    position: fixed;
+    right: .5rem;
+    bottom: -50%;
+    cursor: pointer;
+    font-size: 2.5rem;
+    transition: .4s;
+    color: #b62899;
+}
+
+.scrollUp__icon:hover {
+    transform: translateY(-5px);
+}
+
+.show__btn {
+    bottom: 2rem;
+}
+
+@media screen and (min-width: 1150px) {
+    .scrollUp__icon {
+        right: 1rem;
+        font-size: var(--h1-font-size);
+    }
+}

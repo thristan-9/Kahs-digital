@@ -5,7 +5,9 @@ import HowWork from './components/pages/HowWork';
 import Services from './components/pages/Services';
 import Reviews from './components/pages/Reviews';
 import Faqs from './components/pages/Faqs';
-
+import Contact from './components/pages/Contact';
+import ScrollUpButton from './components/ScrollUpButton'
+import Footer from './components/Footer'
 
 
 const App = () => (
@@ -23,8 +25,11 @@ const App = () => (
       <Reviews />
       <div className="bg__container">
         <Faqs />
+        <Contact />
       </div>
+      <ScrollUpButton />
     </main>
+    <Footer />
   </div>
 )
 

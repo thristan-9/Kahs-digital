@@ -1,8 +1,5 @@
 let facebook, instagram, linkedin, twitter = 0;
-import img1 from "../assets/services_1.svg";
-import img2 from "../assets/services_2.svg";
-import img3 from "../assets/services_3.svg";
-import img4 from "../assets/services_4.svg";
+
 import client__img_1 from "../assets/client__img_1.jpg";
 import client__img_2 from "../assets/client__img_2.jpg";
 import client__img_3 from "../assets/client__img_3.jpg";
@@ -16,16 +13,16 @@ import logo__6 from "../assets/logo__6.png";
 
 export const navLinks = [
     {
-        id: "home",
-        title: "Início",
-    },
-    {
         id: "about",
         title: "Sobre",
     },
     {
-        id: "services",
+        id: "howWork",
         title: "Serviços",
+    },
+    {
+        id: "faqs",
+        title: "FAQs",
     },
     {
         id: "contact",

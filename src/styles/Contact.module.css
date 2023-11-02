@@ -1,0 +1,54 @@
+.contact {
+    margin-top: 10rem;
+}
+
+.contact__container {
+    text-align: center;
+}
+
+.contact__data {
+    gap: 2.5rem;
+    margin-top: 2.5rem;
+}
+
+.social__media_wrapper {
+    text-align: left;
+}
+
+.form__wrapper {
+    gap: 2.5rem;
+    margin: auto;
+    width: 100%;
+}
+
+.contact__message {
+    text-align: left;
+    margin-top: 1rem;
+}
+
+.inputs__wrapper {
+    gap: 2.5rem;
+}
+
+@media screen and (min-width: 1150px) {
+    .contact {
+        margin-top: 12rem;
+    }
+
+    .contact__data {
+        margin-top: 5rem;
+    }
+
+    .form__wrapper {
+        width: 60%;
+    }
+
+    .inputs__wrapper {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .form__wrapper {
+        gap: 4rem;
+    }
+
+}

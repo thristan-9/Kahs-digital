@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Arapey&display=swap');
+
+.logo {
+    width: fit-content;
+}
+
+.logo__wrapper {
+    line-height: 1.5em;
+}
+
+.logoTitle,
+.logoSubTitle {
+    font-family: Arapey, sans-serif;
+}
+
+.logoTitle {
+    font-size: 1.95rem;
+}
+
+.logoSubTitle {
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+}
+
+.secondary {
+    color: var(--light-color);
+}

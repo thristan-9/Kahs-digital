@@ -19,7 +19,7 @@ export default function HowWork() {
   }
 
   return (
-    <section id="how_work">
+    <section id="howWork">
       <div className={`${style.howWork__container}`}>
         <div className={style.top__container}>
           <h1 className={`${style.top__title} title`}>Como a KAHS funciona</h1>
@@ -32,7 +32,7 @@ export default function HowWork() {
         <div className={`${style.middle__container}`}>
 
           <div className={style.middle__box}>
-            <span className="material-icons-outlined icon">videocam</span>
+            <span className={`${style.howWork__icon} material-icons-outlined`}>videocam</span>
             <p className={style.box__text}>Criaçao de conteudo em alta qualidade</p>
             <p className={style.box__text}>
               com <strong>Equipamentos Profissionais</strong>
@@ -40,20 +40,20 @@ export default function HowWork() {
           </div>
 
           <div className={`${style.middle__box} ${style.box__2}`}>
-            <span className="material-icons-outlined icon">insights</span>
+            <span className={`${style.howWork__icon} material-icons-outlined`}>insights</span>
             <p className={style.box__text}>Marketing estratégico para crescimento nas redes</p>
             <p className={style.box__text}>sociais, visando <strong>Objetivos do Cliente</strong></p>
           </div>
 
 
           <div className={`${style.middle__box} ${style.box__2}`}>
-            <span className="material-icons-outlined icon">add</span>
+            <span className={`${style.howWork__icon} material-icons-outlined`}>add</span>
             <p className={style.box__text}>Apresenta resultados positivos já no primeiro</p>
             <p className={style.box__text}>mês de serviço, com <strong>Relatórios Semanais</strong></p>
           </div>
 
           <div className={style.middle__box}>
-            <span className="material-icons-outlined icon">business</span>
+            <span className={`${style.howWork__icon} material-icons-outlined`}>business</span>
             <p className={style.box__text}>Padronizacao da identidade</p>
             <p className={style.box__text}><strong>Visual da Marca</strong></p>
           </div>
@@ -98,7 +98,10 @@ export default function HowWork() {
             <p className={style.box__text}>no primeiro mes</p>
           </div>
 
-          <Button secondary label="Contato" />
+          <a href="#contact">
+            <Button secondary label="Contato" />
+          </a>
+
         </div>
       </div>
     </section>

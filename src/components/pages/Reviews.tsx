@@ -28,11 +28,11 @@ export default function Reviews() {
         const width = window.innerWidth;
         const height = window.innerHeight;
 
-        const minX = (width / 2) - 120;
-        const maxX = (width / 2) + 120;
+        const minX = (width / 2) - 150;
+        const maxX = (width / 2) + 150;
 
-        const minY = (height / 2) - 10;
-        const maxY = (height / 2) + 70;
+        const minY = (height / 2) - 50;
+        const maxY = (height / 2) + 130;
 
         if (mousePosition.x <= minX) {
             mousePosition.x = minX;

@@ -239,8 +239,8 @@
     }
 
     .blob {
-        height: 45%;
-        filter: blur(10rem);
+        height: 35%;
+        filter: blur(9rem);
     }
 
     .client__img {

@@ -1,0 +1,42 @@
+.footer {
+    z-index: -100;
+    position: relative;
+}
+
+.blob {
+    position: absolute;
+    z-index: -10;
+}
+
+.footer__data {
+    display: flex;
+    height: 25vh;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.icons__wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1.5rem;
+    justify-content: center;
+}
+
+.footer__icon {
+    cursor: pointer;
+    color: var(--light-color);
+    font-size: var(--h1-font-size);
+    transition: .3s;
+}
+
+.footer__icon:hover {
+    transform: translateY(-3px);
+}
+
+
+@media screen and (min-width: 1150px) {
+    .footer__icon {
+        font-size: 1.7rem;
+    }
+}

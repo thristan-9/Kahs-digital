@@ -106,6 +106,8 @@
 
 .faqs__icon {
     color: var(--light-color);
+    cursor: pointer;
+    font-size: var(--h1-font-size);
 }
 
 @media screen and (min-width: 1150px) {

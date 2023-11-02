@@ -1,0 +1,36 @@
+.input__data {
+    width: 100%;
+    height: 50px;
+    position: relative;
+}
+
+.input__data input {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-bottom: 2px solid var(--dark-color);;
+    background: none;
+    outline: none;
+    font-size: 1.2rem;
+    padding-top: 15px;
+}
+
+.input__data label {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    pointer-events: none;
+    color: var(--dark-color);
+    transition: .3s;
+    font-size: 1rem;
+}
+
+.input__data input:focus ~ label {
+    transform: translateY(-20px);
+    font-size: 1rem;
+}
+
+.input__active {
+    transform: translateY(-20px);
+    font-size: 1rem;
+}

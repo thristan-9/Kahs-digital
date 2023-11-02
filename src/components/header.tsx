@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { navLinks } from '../constants'
 import style from '../styles/Header.module.css'
+import Logo from './Logo';
 
 export default function Header() {
 
@@ -21,12 +22,7 @@ export default function Header() {
     <header className={style["header"]}>
       <nav className={`${style["nav"]} container`}>
 
-        <a href="/">
-          <div className={`${style.logo}`}>
-            <h1 className={`${style.logoTitle}`}>KAHS</h1>
-            <h2 className={`${style.logoSubTitle}`}>DIGITAL</h2>
-          </div>
-        </a>
+        <Logo/>
 
         <div className={`${style["nav__menu"]} ${toggleMenuClass}`} id="nav-menu">
           <ul className={style["nav__list"]}>
@@ -40,7 +36,7 @@ export default function Header() {
           </ul>
 
           <div className={style["nav__close"]} id="nav-close">
-            <span onClick={() => toggleMenu()} className="material-icons-outlined icon">
+            <span onClick={() => toggleMenu()} className={`${style.header__icon} material-icons-outlined`}>
               close
             </span>
           </div>
@@ -48,7 +44,7 @@ export default function Header() {
         </div>
 
         <div className={style["nav__toggle"]} id="nav-toggle">
-          <span onClick={() => toggleMenu()} className="material-icons-outlined icon">
+          <span onClick={() => toggleMenu()} className={`${style.header__icon} material-icons-outlined`}>
             menu
           </span>
         </div>

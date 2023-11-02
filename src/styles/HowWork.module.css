@@ -139,6 +139,10 @@
     margin-bottom: 2rem;
 }
 
+.howWork__icon {
+    font-size: var(--h1-font-size);
+}
+
 
 @media screen and (min-width: 300px) {
     .slider {

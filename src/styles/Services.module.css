@@ -61,6 +61,15 @@
     opacity: .8;
 }
 
+@media screen and (min-width: 600px) { 
+    .card {
+        width: auto;
+        max-width: 500px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+}
+
 @media screen and (min-width: 1150px) {
     .services__data {
         grid-template-columns: 1fr 1fr;
