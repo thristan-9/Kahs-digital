@@ -3,9 +3,11 @@
     right: .5rem;
     bottom: -50%;
     cursor: pointer;
-    font-size: 2.5rem;
+    font-size: 2rem;
     transition: .4s;
-    color: #b62899;
+    color: var(--light-color);
+    mix-blend-mode: difference;
+    z-index: var(--z-fixed);
 }
 
 .scrollUp__icon:hover {

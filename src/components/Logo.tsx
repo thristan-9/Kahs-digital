@@ -1,7 +1,7 @@
 import style from '../styles/Logo.module.css'
 
 
-export default function Logo({ secondary = false}) {
+export default function Logo({ secondary = false }) {
   return (
     <div className={style.logo}>
       <a href="#">

@@ -1,18 +1,24 @@
 .footer {
-    z-index: -100;
     position: relative;
+    overflow: hidden;
+    height: 30vh;
 }
 
 .blob {
     position: absolute;
-    z-index: -10;
+    top: 0;
+    transform: translate(-50%, -69%);
+    left: 50%;
+    filter: blur(4rem);
 }
 
 .footer__data {
     display: flex;
-    height: 25vh;
+    height: 100%;
     align-items: center;
     justify-content: space-between;
+    z-index: var(--z-tooltip);
+    height: 30vh;
 }
 
 .icons__wrapper {
