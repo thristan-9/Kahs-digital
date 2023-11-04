@@ -23,12 +23,16 @@ export default function Hero() {
               <Button label="Serviços" />
             </a>
 
-            <div className={`${style.icons__wrapper}`}>
-              <AiOutlineInstagram className={`${style.hero__icon}`} />
-
-              <AiOutlineLinkedin className={`${style.hero__icon}`} />
-            
-              <AiOutlineWhatsApp className={`${style.hero__icon}`} />
+            <div className={`${style.icons}`}>
+              <div className={style.icon__wrapper}>
+                <AiOutlineInstagram className={`${style.hero__icon}`} />
+              </div>
+              <div className={style.icon__wrapper}>
+                <AiOutlineLinkedin className={`${style.hero__icon}`} />
+              </div>
+              <div className={style.icon__wrapper}>
+                <AiOutlineWhatsApp className={`${style.hero__icon}`} />
+              </div>
             </div>
         
           </div>

@@ -35,7 +35,8 @@
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
 
-    --box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
+    --box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+        rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;    
 
     /*========== Font and typography ==========*/
     /*.5rem = 8px | 1rem = 16px ...*/

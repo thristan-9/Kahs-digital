@@ -21,28 +21,37 @@
 }
 
 .buttons__wrapper {
+  display: grid;
   gap: 1rem;
   align-items: center;
 }
 
-.icons__wrapper {
+.icons {
   display: flex;
   align-items: center;
   gap: 1rem;
-  margin-top: 1.5rem;
   justify-content: center;
 }
 
+.icon__wrapper {
+  padding: .7rem;
+  background-color: var(--light-color);
+  border-radius: 9999px;
+  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+    rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+  transition: .3s;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.icon__wrapper:hover {
+  transform: translateY(-5px);
+}
 
 .hero__icon {
   color: var(--dark-color);
   font-size: var(--h1-font-size);
-  transition: .3s;
-  cursor: pointer;
-}
-
-.hero__icon:hover {
-  transform: translateY(-3px);
 }
 
 .hero__img {
@@ -128,7 +137,6 @@
     align-items: center;
     justify-content: initial;
     gap: 1rem;
-    margin-top: 0;
   }
 
   .hero__icon {

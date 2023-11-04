@@ -1,12 +1,7 @@
 .about__container {
-    display: flex;
-    position: relative;
     background-color: var(--dark-color);
-    align-items: center;
-    gap: 2rem;
     box-shadow: var(--box-shadow);
-    flex-direction: column-reverse;
-    padding: 2rem;
+    padding: 1rem;
     margin-left: auto;
     margin-right: auto;
     width: 96%;
@@ -14,6 +9,19 @@
     border-top-left-radius: 8px;
     border-bottom-left-radius: 40px;
     border-bottom-right-radius: 40px;
+}
+
+.about__wrapper {
+    width: 100%;
+    background-image: radial-gradient(rgba(255, 255, 255, 0.17) 1px, transparent 1px);
+    background-position: 50% 50%;
+    background-size: 1.1rem 1.1rem;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-direction: column-reverse;
+    border-radius: 4rem;
 }
 
 .about__data {
@@ -53,9 +61,14 @@
     .about__container {
         width: clamp(800px, 80%, 1450px);
         border-radius: 40px;
-        padding: 5rem;
+        padding: 2rem;
+    }
+
+    .about__wrapper {
+        padding: 2rem;
         gap: 5rem;
-        flex-direction: initial
+        flex-direction: initial;
+        border-radius: 2rem;
     }
 
     .logo {
