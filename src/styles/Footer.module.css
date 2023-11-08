@@ -6,26 +6,42 @@
 
 .blob {
     position: absolute;
+    width: 200%;
     top: 0;
-    transform: translate(-50%, -69%);
+    transform: translate(-50%, -55%);
     left: 50%;
-    filter: blur(4rem);
+    filter: blur(1.5rem);
 }
 
 .footer__data {
     display: flex;
-    height: 100%;
     align-items: center;
     justify-content: space-between;
     z-index: var(--z-tooltip);
     height: 30vh;
 }
 
+.nav__list {
+    display: none;
+    align-items: center;
+    flex-direction: row;
+    column-gap: 3rem;
+}
+
+.nav__link {
+    display: block;
+    color: var(--light-color);
+    transition: .3s;
+}
+
+.nav__link:hover {
+    transform: translateY(-3px);
+}
+
 .icons__wrapper {
     display: flex;
     align-items: center;
     gap: 1rem;
-    margin-top: 1.5rem;
     justify-content: center;
 }
 
@@ -42,6 +58,15 @@
 
 
 @media screen and (min-width: 1150px) {
+    .nav__list {
+        display: flex;
+    }
+
+    .blob {
+        transform: translate(-50%, -69%);
+        filter: blur(4rem);
+    }
+
     .footer__icon {
         font-size: 1.7rem;
     }

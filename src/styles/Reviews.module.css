@@ -63,7 +63,7 @@
     content: "";
     top: 0;
     left: 0;
-    width: 100px;
+    width: 40px;
     height: 100%;
     background: linear-gradient(to left,rgba(255, 255, 255, 0), #000000);
     z-index: var(--z-tooltip);
@@ -74,7 +74,7 @@
     content: "";
     top: 0;
     right: 0;
-    width: 100px;
+    width: 40px;
     height: 100%;
     background: linear-gradient(to right, rgba(255, 255, 255, 0), #000000);
     z-index: var(--z-tooltip);
@@ -183,14 +183,14 @@
 .blob {
     position: absolute;
     background: linear-gradient(#b62899 0%, #a84ddf 100%);
-    height: 30%;
+    height: 45%;
     aspect-ratio: 1;
     border-radius: 50%;
     left: 50%;
     top: 50%;
     translate: -50% -50%;
     animation: rotate 15s infinite linear;
-    filter: blur(9rem);
+    filter: blur(13rem);
 }
 
 .show {
@@ -212,6 +212,14 @@
 }
 
 @media screen and (min-width: 1150px) {
+    .logos__wrapper::after {
+        width: 90px;
+    }
+
+    .logos__wrapper::before {
+        width: 90px;
+    }
+
     .review__item_small {
         min-height: initial;
     }
@@ -239,8 +247,8 @@
     }
 
     .blob {
-        height: 35%;
-        filter: blur(9rem);
+        height: 45%;
+        filter: blur(11rem);
     }
 
     .client__img {

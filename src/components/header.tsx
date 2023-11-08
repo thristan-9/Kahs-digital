@@ -26,7 +26,7 @@ export default function Header() {
 
         <div className={`${style["nav__menu"]} ${toggleMenuClass}`} id="nav-menu">
           <ul className={style["nav__list"]}>
-            {navLinks.map((nav: nav)=> {
+            {navLinks.map((nav)=> {
               return (
                 <li key={`${nav.id}`}>
                   <a onClick={() => setMenuActive(false)} href={`#${nav.id}`} className={style["nav__link"]}><p>{nav.title}</p></a>

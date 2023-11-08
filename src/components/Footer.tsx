@@ -2,6 +2,8 @@ import style from "../styles/Footer.module.css";
 import { AiOutlineInstagram, AiOutlineLinkedin, AiOutlineWhatsApp } from 'react-icons/ai';
 import Logo from './Logo';
 import blob from '../assets/blob.png';
+import { navLinks } from '../constants'
+
 
 
 export default function Footer() {
@@ -13,6 +15,16 @@ export default function Footer() {
 
                 <div className={`${style.footer__data}`}>
                     <Logo secondary/>
+
+                    <ul className={style.nav__list}>
+                        {navLinks.map((nav) => {
+                            return (
+                                <li key={`${nav.id}`}>
+                                    <a href={`#${nav.id}`} className={style.nav__link}>{nav.title}</a>
+                                </li>
+                            )
+                        })}
+                    </ul>
 
                     <div className={`${style.icons__wrapper}`}>
                         <AiOutlineInstagram className={`${style.footer__icon}`} />

@@ -19,7 +19,7 @@ export default function Hero() {
           </h3>
 
           <div className={`${style.buttons__wrapper}`}>
-            <a href="#how_work">
+            <a href="#howWork">
               <Button label="Serviços" />
             </a>
 
