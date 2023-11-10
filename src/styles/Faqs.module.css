@@ -4,6 +4,7 @@
 
 .faqs__data {
     position: relative;
+    text-align: center;
 }
 
 .slider {
@@ -13,38 +14,29 @@
     box-shadow: var(--box-shadow);
     border-radius: 40px;
     overflow: hidden;
-    scroll-behavior: smooth;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
 }
 
-.slider::-webkit-scrollbar {
-    display: none;
-}
-
-.slider ul {
-    display: grid;
-    grid-auto-flow: column;
-    overflow: hidden;
-    position: relative;
-    margin: 0;
-    padding: 0;
-    height: 25rem;
-    width: 300%;
-    list-style: none;
-}
-
-.slider ul li {
-    position: relative;
+.slide__active {
+    display: block;
+    position: absolute;
+    opacity: 0;
     width: 100%;
     height: 25rem;
     text-align: center;
     padding-inline: 1rem;
     padding-block: 2rem;
+    animation: smooth-appear 1s ease forwards;
 }
 
-.slide__title {
-    /* color: var(--light-color); */
+@keyframes smooth-appear {
+    to {
+        right: 0px;
+        opacity: 1;
+    }
+}
+
+.slide {
+   display: none
 }
 
 .slide__description_center {
@@ -54,10 +46,6 @@
     align-items: center;
     height: 80%;
     margin: auto;
-}
-
-.slide__description {
-    /* color: var(--light-color); */
 }
 
 .dots {
@@ -120,12 +108,11 @@
         padding-top: 10rem;
     }
 
-    .slider ul {
+    .slider {
         height: 30rem;
     }
 
-    .slider ul li {
-        width: 100%;
+    .slide__active {
         height: 30rem;
         padding: 5rem;
         padding-inline: 10rem;
@@ -143,11 +130,11 @@
 
 @media screen and (min-width: 1750px) {
 
-    .slider ul {
+    .slider {
         height: 35rem;
     }
 
-    .slider ul li {
+    .slide__active {
         height: 35rem;
     }
 

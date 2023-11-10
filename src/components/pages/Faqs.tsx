@@ -1,58 +1,38 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import style from "../../styles/Faqs.module.css";
 import { faqs } from "../../constants";
 
 export default function Faqs() {
 
-    const dotRef1 = useRef();
-    const dotRef2 = useRef();
-    const dotRef3 = useRef();
+    const [slideNumber, setSlideNumber] = useState(0);
+    const sliderRef = useRef(null);
 
-    function move(direction) {
-        const currentUrl = window.location.href;
-        let questionSelected = currentUrl.split('#')[1];
+    function move(direction, index) {
+        let newSlideNumber = index;
+        const totalNoofSlides = sliderRef.current.children.length - 1;
 
-        if (questionSelected?.search("faqs-slide") < 0) {
-            questionSelected = undefined;
+        if (direction === "left") {
+            newSlideNumber = slideNumber === 0 ? totalNoofSlides : slideNumber - 1
+        }
+        else if (direction === "right") {
+            newSlideNumber = slideNumber === totalNoofSlides ? 0 : slideNumber + 1
         }
 
-        switch (questionSelected) {
-            case "faqs-slide-1":
-                if (direction == "right") {
-                    dotRef2.current.click();
-                } else {
-                    dotRef3.current.click();
-                }
-            break;
-            case "faqs-slide-2":
-                if (direction == "right") {
-                    dotRef3.current.click();
-                } else {
-                    dotRef1.current.click();
-                }
-            break;
-            case "faqs-slide-3":
-                if (direction == "left") {
-                    dotRef2.current.click();
-                } else {
-                    dotRef1.current.click();
-                }
-            break;
-            case undefined:
-                if (direction == "right" && dotRef2?.current) {
-                    dotRef2.current.click();
-                } else {
-                    dotRef3.current.click();
-                }
-            break;
-        }
-        
+        setSlideNumber(newSlideNumber);
+
+        Array.from(sliderRef.current.children).forEach((slide) => {
+            slide.classList.remove(style.slide__active);
+            slide.classList.add(style.slide);
+        });
+
+        sliderRef.current.children[newSlideNumber].classList.add(style.slide__active);
+        sliderRef.current.children[newSlideNumber].classList.remove(style.slide);
     }
 
     return (
         <section id="faqs" className={style.faqs}>
             <div className={`${style.faqs__container} container`}>
-                
+
                 <div className={`${style.faqs__data}`}>
 
                     <div onClick={() => move("left")} className={`${style.icon__wrapper} ${style.icon__left}`}>
@@ -63,29 +43,29 @@ export default function Faqs() {
                         <span className={`material-icons-outlined ${style.faqs__icon}`}>arrow_forward_ios</span>
                     </div>
 
-                    <div className={style.slider}>
-                        <ul>
-                            {faqs.map((item, index) => {
-                                return (
-                                    <li id={"faqs-slide-" + (index + 1)} key={index}>
-                                        <h1 className={style.slide__title}>
-                                            {item.question}
-                                        </h1>
-                                        <div className={style.slide__description_center}>
-                                            <h3 className={style.slide__description}>
-                                                {item.answer}
-                                            </h3>
-                                        </div>
-                                    </li>
-                                )
-                            })}
-                        </ul>
+                    <div ref={sliderRef} className={style.slider}>
+                        {faqs.map((item, index) => {
+                            return (
+                                <div className={`${index === 0 ? style.slide__active : style.slide}`} key={index}>
+                                    <h1 className={style.slide__title}>
+                                        {item.question}
+                                    </h1>
+                                    <div className={style.slide__description_center}>
+                                        <h3 className={style.slide__description}>
+                                            {item.answer}
+                                        </h3>
+                                    </div>
+                                </div>
+                            )
+                        })}
                     </div>
-                    
+
                     <div className={style.dots}>
-                        <a ref={dotRef1} className={style.dot} href="#faqs-slide-1"></a>
-                        <a ref={dotRef2} className={style.dot} href="#faqs-slide-2"></a>
-                        <a ref={dotRef3} className={style.dot} href="#faqs-slide-3"></a>
+                        {faqs.map((item, index) => {
+                            return (
+                                <div onClick={()=> move("", index)} key={index} className={style.dot}></div>
+                            );
+                        })}
                     </div>
 
                 </div>

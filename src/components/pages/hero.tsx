@@ -40,7 +40,7 @@ export default function Hero() {
         </div>
 
         <div className={style.hero__ellipse} />
-        <img className={style.hero__img} src={heroImg} />
+        <img draggable={false} className={style.hero__img} src={heroImg} />
 
       </div>
     </section>

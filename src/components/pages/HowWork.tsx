@@ -65,12 +65,12 @@ export default function HowWork() {
         <div className={`${style.iphone_slide_wrapper}`}>
 
           <div className={style.iphone__frame}>
-            <img className={style.iphone__frame_img} src={iphone__frame} />
+            <img draggable={false} className={style.iphone__frame_img} src={iphone__frame} />
 
             <div className={style.slider}>
-              <img id="slide-1" className={style.iphone__img} src={iphone__img_1} />
-              <img id="slide-2" className={style.iphone__img} src={iphone__img_2} />
-              <img id="slide-3" className={style.iphone__img} src={iphone__img_3} />
+              <img draggable={false} id="slide-1" className={style.iphone__img} src={iphone__img_1} />
+              <img draggable={false} id="slide-2" className={style.iphone__img} src={iphone__img_2} />
+              <img draggable={false} id="slide-3" className={style.iphone__img} src={iphone__img_3} />
             </div>
 
           </div>

@@ -11,7 +11,7 @@ export default function Footer() {
         <footer className={style.footer}>
             <div className={`${style.footer__container} container grid`}>
 
-                <img className={style.blob} src={blob}/>
+                <img draggable={false} className={style.blob} src={blob}/>
 
                 <div className={`${style.footer__data}`}>
                     <Logo secondary/>

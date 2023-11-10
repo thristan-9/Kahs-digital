@@ -8,7 +8,7 @@ export default function About() {
 
                 <div className={style.about__wrapper}>
 
-                    <img className={style.logo} src={logo} />  
+                    <img draggable={false} className={style.logo} src={logo} />  
 
                     <div className={`${style.about__data}`}>
                     

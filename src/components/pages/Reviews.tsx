@@ -62,7 +62,7 @@ export default function Reviews() {
 
                     <div className={`${style.review__item}`}>
                         <div className={style.review__header}>
-                            <img className={style.client__img} src={client__2.img} />
+                            <img draggable={false} className={style.client__img} src={client__2.img} />
                             <div>
                                 <h2 className={`${style.name} ${style.text__light_color}`}>{client__2.name}</h2>
                                 <h3 className={`${style.business} ${style.text__light_color}`}>{client__2.business}</h3>
@@ -75,7 +75,7 @@ export default function Reviews() {
 
                     <div className={`${style.review__item} ${style.show}`}>
                         <div className={style.review__header}>
-                            <img className={style.client__img} src={client__3.img} />
+                            <img draggable={false} className={style.client__img} src={client__3.img} />
                             <div>
                                 <h2 className={`${style.name} ${style.text__light_color}`}>{client__3.name}</h2>
                                 <h3 className={`${style.business} ${style.text__light_color}`}>{client__3.business}</h3>
@@ -88,7 +88,7 @@ export default function Reviews() {
 
                     <div className={`${style.review__item} ${style.show}`}>
                         <div className={style.review__header}>
-                            <img className={style.client__img} src={client__4.img} />
+                            <img draggable={false} className={style.client__img} src={client__4.img} />
                             <div>
                                 <h2 className={`${style.name} ${style.text__light_color}`}>{client__4.name}</h2>
                                 <h3 className={`${style.business} ${style.text__light_color}`}>{client__4.business}</h3>
@@ -101,7 +101,7 @@ export default function Reviews() {
 
                     <div className={`${style.review__wrap}`}>
                         <div className={`${style.review__item_small}`}>
-                            <img className={style.client__img_small} src={client__3.img} />
+                            <img draggable={false} className={style.client__img_small} src={client__3.img} />
                             <div className={`${style.review__data} grid`}>
                                 <div>
                                     <h2 className={`${style.name__small} ${style.text__light_color}`}>{client__3.name}</h2>
@@ -112,7 +112,7 @@ export default function Reviews() {
                         </div>
 
                         <div className={`${style.review__item_small}`}>
-                            <img className={style.client__img_small} src={client__4.img} />
+                            <img draggable={false} className={style.client__img_small} src={client__4.img} />
                             <div className={`${style.review__data} grid`}>
                                 <div>
                                     <h2 className={`${style.name__small} ${style.text__light_color}`}>{client__4.name}</h2>
@@ -152,7 +152,7 @@ export default function Reviews() {
                                     {client__logos.map((imgSource, index) => {
                                         return (
                                             <div key={index}>
-                                                <img src={imgSource} />
+                                                <img draggable={false} src={imgSource} />
                                             </div>
                                         )
                                     })}
@@ -161,7 +161,7 @@ export default function Reviews() {
                                     {client__logos.map((imgSource, index) => {
                                         return (
                                             <div key={index}>
-                                                <img src={imgSource} />
+                                                <img draggable={false} src={imgSource} />
                                             </div>
                                         )
                                     })}
@@ -173,7 +173,7 @@ export default function Reviews() {
 
                     <div className={`${style.review__item}`}>
                         <div className={style.review__header}>
-                            <img className={style.client__img} src={client__1.img} />
+                            <img draggable={false} className={style.client__img} src={client__1.img} />
                             <div>
                                 <h2 className={`${style.name} ${style.text__light_color}`}>{client__1.name}</h2>
                                 <h3 className={`${style.business} ${style.text__light_color}`}>{client__1.business}</h3>
@@ -213,7 +213,7 @@ export default function Reviews() {
                                     {client__logos.map((imgSource, index) => {
                                         return (
                                             <div key={index}>
-                                                <img src={imgSource} />
+                                                <img draggable={false} src={imgSource} />
                                             </div>
                                         )
                                     })}
@@ -222,7 +222,7 @@ export default function Reviews() {
                                     {client__logos.map((imgSource, index) => {
                                         return (
                                             <div key={index}>
-                                                <img src={imgSource} />
+                                                <img draggable={false} src={imgSource} />
                                             </div>
                                         )
                                     })}
