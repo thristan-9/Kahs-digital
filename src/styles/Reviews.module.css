@@ -7,8 +7,9 @@
     padding-block: 5rem;
 }
 
-.text__light_color {
-    color: var(--light-color);
+.reviews__title {
+    position: sticky;
+    z-index: var(--z-tooltip);
 }
 
 .reviews__data {
@@ -190,7 +191,16 @@
     top: 50%;
     translate: -50% -50%;
     animation: rotate 15s infinite linear;
-    filter: blur(13rem);
+}
+
+.blur {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    backdrop-filter: blur(6rem);
+    z-index: 2;
 }
 
 .show {
@@ -225,7 +235,7 @@
     }
 
     .reviews__container {
-        margin-bottom: 10rem;
+        padding-bottom: 15rem;
     }
 
     .reviews__data {
@@ -247,8 +257,7 @@
     }
 
     .blob {
-        height: 45%;
-        filter: blur(11rem);
+        height: 50%;
     }
 
     .client__img {

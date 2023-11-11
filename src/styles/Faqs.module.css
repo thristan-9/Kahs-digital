@@ -19,18 +19,34 @@
 .slide__active {
     display: block;
     position: absolute;
-    opacity: 0;
+    opacity: 0.1;
     width: 100%;
     height: 25rem;
     text-align: center;
     padding-inline: 1rem;
     padding-block: 2rem;
-    animation: smooth-appear 1s ease forwards;
 }
 
-@keyframes smooth-appear {
+.slide__animation_right {
+    right: -50%;
+    animation: smooth-appear-right 1s ease forwards;
+}
+
+.slide__animation_left {
+    left: -50%;
+    animation: smooth-appear-left 1s ease forwards;
+}
+
+@keyframes smooth-appear-right {
     to {
         right: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes smooth-appear-left {
+    to {
+        left: 0px;
         opacity: 1;
     }
 }

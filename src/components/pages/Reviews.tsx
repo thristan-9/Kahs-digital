@@ -52,11 +52,13 @@ export default function Reviews() {
     return (
         <section onMouseEnter={() => setShowCountUp(true)} onMouseMove={() => moveBlob()} className={style.reviews} id="reviews">
 
-            <div ref={blobRef} className={`${style.blob}`} />
-
             <div className={`${style.reviews__container} container`}>
 
-                <h1 className={`${style.text__light_color} title`}>Feedbacks</h1>
+
+                <h1 className={`${style.reviews__title} light__text title`}>Feedbacks</h1>
+
+                <div ref={blobRef} className={`${style.blob}`} />
+                <div className={`${style.blur}`} />
 
                 <div className={`${style.reviews__data} grid`}>
 
@@ -64,12 +66,12 @@ export default function Reviews() {
                         <div className={style.review__header}>
                             <img draggable={false} className={style.client__img} src={client__2.img} />
                             <div>
-                                <h2 className={`${style.name} ${style.text__light_color}`}>{client__2.name}</h2>
-                                <h3 className={`${style.business} ${style.text__light_color}`}>{client__2.business}</h3>
+                                <h2 className={`${style.name} light__text`}>{client__2.name}</h2>
+                                <h3 className={`${style.business} light__text`}>{client__2.business}</h3>
                             </div>
                         </div>
                         <div className={style.review__body}>
-                            <p className={`${style.feedback} ${style.text__light_color}`}>{client__2.feedback}</p>
+                            <p className={`${style.feedback} light__text`}>{client__2.feedback}</p>
                         </div>
                     </div>
 
@@ -77,12 +79,12 @@ export default function Reviews() {
                         <div className={style.review__header}>
                             <img draggable={false} className={style.client__img} src={client__3.img} />
                             <div>
-                                <h2 className={`${style.name} ${style.text__light_color}`}>{client__3.name}</h2>
-                                <h3 className={`${style.business} ${style.text__light_color}`}>{client__3.business}</h3>
+                                <h2 className={`${style.name} light__text`}>{client__3.name}</h2>
+                                <h3 className={`${style.business} light__text`}>{client__3.business}</h3>
                             </div>
                         </div>
                         <div className={style.review__body}>
-                            <p className={`${style.feedback} ${style.text__light_color}`}>{client__3.feedback}</p>
+                            <p className={`${style.feedback} light__text`}>{client__3.feedback}</p>
                         </div>
                     </div>
 
@@ -90,12 +92,12 @@ export default function Reviews() {
                         <div className={style.review__header}>
                             <img draggable={false} className={style.client__img} src={client__4.img} />
                             <div>
-                                <h2 className={`${style.name} ${style.text__light_color}`}>{client__4.name}</h2>
-                                <h3 className={`${style.business} ${style.text__light_color}`}>{client__4.business}</h3>
+                                <h2 className={`${style.name} light__text`}>{client__4.name}</h2>
+                                <h3 className={`${style.business} light__text`}>{client__4.business}</h3>
                             </div>
                         </div>
                         <div className={style.review__body}>
-                            <p className={`${style.feedback} ${style.text__light_color}`}>{client__4.feedback}</p>
+                            <p className={`${style.feedback} light__text`}>{client__4.feedback}</p>
                         </div>
                     </div>
 
@@ -104,10 +106,10 @@ export default function Reviews() {
                             <img draggable={false} className={style.client__img_small} src={client__3.img} />
                             <div className={`${style.review__data} grid`}>
                                 <div>
-                                    <h2 className={`${style.name__small} ${style.text__light_color}`}>{client__3.name}</h2>
-                                    <h3 className={`${style.business__small} ${style.text__light_color}`}>{client__3.business}</h3>
+                                    <h2 className={`${style.name__small} light__text`}>{client__3.name}</h2>
+                                    <h3 className={`${style.business__small} light__text`}>{client__3.business}</h3>
                                 </div>
-                                <p className={`${style.feedback__small} ${style.text__light_color}`}>{client__3.feedback}</p>
+                                <p className={`${style.feedback__small} light__text`}>{client__3.feedback}</p>
                             </div>
                         </div>
 
@@ -115,10 +117,10 @@ export default function Reviews() {
                             <img draggable={false} className={style.client__img_small} src={client__4.img} />
                             <div className={`${style.review__data} grid`}>
                                 <div>
-                                    <h2 className={`${style.name__small} ${style.text__light_color}`}>{client__4.name}</h2>
-                                    <h3 className={`${style.business__small} ${style.text__light_color}`}>{client__4.business}</h3>
+                                    <h2 className={`${style.name__small} light__text`}>{client__4.name}</h2>
+                                    <h3 className={`${style.business__small} light__text`}>{client__4.business}</h3>
                                 </div>
-                                <p className={`${style.feedback__small} ${style.text__light_color}`}>{client__4.feedback}</p>
+                                <p className={`${style.feedback__small} light__text`}>{client__4.feedback}</p>
                             </div>
                         </div>
                     </div>
@@ -175,12 +177,12 @@ export default function Reviews() {
                         <div className={style.review__header}>
                             <img draggable={false} className={style.client__img} src={client__1.img} />
                             <div>
-                                <h2 className={`${style.name} ${style.text__light_color}`}>{client__1.name}</h2>
-                                <h3 className={`${style.business} ${style.text__light_color}`}>{client__1.business}</h3>
+                                <h2 className={`${style.name} light__text`}>{client__1.name}</h2>
+                                <h3 className={`${style.business} light__text`}>{client__1.business}</h3>
                             </div>
                         </div>
                         <div className={style.review__body}>
-                            <p className={`${style.feedback} ${style.text__light_color}`}>{client__1.feedback}</p>
+                            <p className={`${style.feedback} light__text`}>{client__1.feedback}</p>
                         </div>
                     </div>
 
