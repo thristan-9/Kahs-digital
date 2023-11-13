@@ -13,7 +13,7 @@ export default function Footer() {
                 <RevealMe reset origin="top">
 
 
-                    <img draggable={false} className={style.blob} src={blob}/>
+                    <img alt="blob" loading="lazy" draggable={false} className={style.blob} src={blob}/>
 
                     <div className={`${style.footer__data}`}>
                         <Logo secondary/>

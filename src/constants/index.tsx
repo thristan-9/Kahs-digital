@@ -10,9 +10,9 @@ import logo__3 from "../assets/logo__3.png";
 import logo__4 from "../assets/logo__4.png";
 import logo__5 from "../assets/logo__5.png";
 import logo__6 from "../assets/logo__6.png";
-import iphone__img_1 from "../assets/iphone__img_1.png";
-import iphone__img_2 from "../assets/iphone__img_2.png";
-import iphone__img_3 from "../assets/iphone__img_3.png";
+import iphone__img_1 from "../assets/iphone__img_1.webp";
+import iphone__img_2 from "../assets/iphone__img_2.webp";
+import iphone__img_3 from "../assets/iphone__img_3.webp";
 
 export const navLinks = [
     {
@@ -20,7 +20,7 @@ export const navLinks = [
         title: "Sobre",
     },
     {
-        id: "howWork",
+        id: "services",
         title: "Serviços",
     },
     {

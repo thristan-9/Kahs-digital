@@ -1,5 +1,5 @@
 import style from '../../styles/About.module.css'
-import logo from '../../assets/iphone__img_insta.png'
+import cellphone from '../../assets/iphone__img_insta.webp'
 import RevealMe from '../RevealMe'
 
 export default function About() {
@@ -11,7 +11,7 @@ export default function About() {
                 <RevealMe origin="left" reset>
                     <div className={style.about__wrapper}>
 
-                        <img draggable={false} className={style.logo} src={logo} />
+                        <img alt="cellphone" draggable={false} className={style.cell__phone} src={cellphone} />
 
                         <div className={`${style.about__data}`}>
 

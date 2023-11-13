@@ -89,11 +89,11 @@ export default function HowWork() {
             </div>
 
             <div ref={sliderRef} className={style.slider}>
-              <img draggable={false} className={style.iphone__frame_img} src={iphone__frame} />
+              <img alt="iphone frame" loading="lazy" draggable={false} className={style.iphone__frame_img} src={iphone__frame} />
 
               {iphone__imgs.map((imgSrc, index) => {
                 return (
-                  <img draggable={false} className={`${index === 0 ? (style.img__active) : style.img}`} key={index} src={imgSrc} />
+                  <img alt="instagram pages" loading="lazy" draggable={false} className={`${index === 0 ? (style.img__active) : style.img}`} key={index} src={imgSrc} />
                 )
               })}
 

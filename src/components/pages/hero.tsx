@@ -1,5 +1,5 @@
 import style from "../../styles/Hero.module.css";
-import heroImg from "../../assets/hero__img.png";
+import heroImg from "../../assets/hero__img.webp";
 import Button from "../Button";
 import RevealMe from "../RevealMe";
 import { AiOutlineInstagram, AiOutlineLinkedin, AiOutlineWhatsApp } from 'react-icons/ai';
@@ -17,13 +17,13 @@ export default function Hero() {
               Gerenciamento <br /> de Mídias <br />{" "}
               <span className={`text__gradient`}>Sociais</span>
             </h1>
-            <h3 className={`${style.hero__description}`}>
+            <p className={`${style.hero__description}`}>
               Aumente sua visibilidade e conquiste <br /> resultados reais nas
               redes sociais.
-            </h3>
+            </p>
 
             <div className={`${style.buttons__wrapper}`}>
-              <a href="#howWork">
+              <a href="#services">
                 <Button label="Serviços" />
               </a>
 
@@ -50,7 +50,7 @@ export default function Hero() {
           
         </div>
 
-        <img draggable={false} className={style.hero__img} src={heroImg} />
+        <img alt="woman colorful" draggable={false} className={style.hero__img} src={heroImg} />
 
       </div>
     </RevealMe>

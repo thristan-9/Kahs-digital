@@ -22,7 +22,7 @@ const InputText = ({ label, disabled, secondary, ...props }: InputProps) => {
     return (
         <div className={style.input__data}>
             <input onChange={(e) => onChangeInput(e)} type="text" disabled={disabled} {...props} />
-            <label className={`${inputValue ? style.input__active : undefined}`}>{label}</label>
+            <label htmlFor={props?.id} className={`${inputValue ? style.input__active : undefined}`}>{label}</label>
         </div>
     )
 }

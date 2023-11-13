@@ -39,12 +39,12 @@ export default function Contact() {
                     <form ref={formRef} onSubmit={sendEmail}>
                         <div className={`${style.form__wrapper} grid`}>
                             <div className={`${style.inputs__wrapper} grid`}>
-                                <InputText required name="user_name" label="Nome" />
-                                <InputText required name="user_email" label="E-mail" />
+                                <InputText required id="user_name" name="user_name" label="Nome" />
+                                <InputText required id="user_email" name="user_email" label="E-mail" />
                             </div>
 
                             <div>
-                                <InputText required name="user_message" label="Menssagem" />
+                                <InputText required id="user_message" name="user_message" label="Menssagem" />
                                 <p ref={formMessageRef} className={style.contact__message}></p>
                             </div>
 

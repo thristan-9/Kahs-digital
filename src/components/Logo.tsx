@@ -7,7 +7,7 @@ export default function Logo({ secondary = false }) {
   return (
     <div className={style.logo}>
       <a href="#">
-        <img className={style.logoImg} src={secondary ? logoWhite : logoBlack}/>
+        <img alt="kahs digital logo" className={style.logoImg} src={secondary ? logoWhite : logoBlack}/>
       </a>
     </div>
   )
