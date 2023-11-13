@@ -2,7 +2,6 @@
   "name": "kahs-digital",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://kahsdigital.com",
   "type": "module",
   "scripts": {
     "dev": "vite",
