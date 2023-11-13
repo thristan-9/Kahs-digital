@@ -10,6 +10,9 @@ import logo__3 from "../assets/logo__3.png";
 import logo__4 from "../assets/logo__4.png";
 import logo__5 from "../assets/logo__5.png";
 import logo__6 from "../assets/logo__6.png";
+import iphone__img_1 from "../assets/iphone__img_1.png";
+import iphone__img_2 from "../assets/iphone__img_2.png";
+import iphone__img_3 from "../assets/iphone__img_3.png";
 
 export const navLinks = [
     {
@@ -33,13 +36,13 @@ export const navLinks = [
 export const services = [
     {
         id: "services-1",
-        title: "Estrategias de Midias Sociais",
-        content: "Desenvolvemos estrategias efetivas para otimizar sua presensa nas midia sociais, engajar seguidores, promover produtos ou serviços e aumentar o reconhecimento da marca.",
+        title: "Estrategias de Mídias Sociais",
+        content: "Desenvolvemos estrategias efetivas para otimizar sua presença nas mídias sociais, engajar seguidores, promover produtos ou serviços e aumentar o reconhecimento da marca.",
     },
     {
         id: "services-2",
-        title: "Criacao de Conteudo",
-        content: "Criamos conteudos impactantes que se conecta com o seu publico alvo como textos, imagens e vídeos que sejam relevantes e valiosos para a sua audiência.",
+        title: "Criação de Conteúdo",
+        content: "Criamos conteúdos impactantes que se conecta com o seu público alvo como textos, imagens e vídeos que sejam relevantes e valiosos para a sua audiência.",
     },
     {
         id: "services-3",
@@ -49,32 +52,14 @@ export const services = [
     {
         id: "services-4",
         title: "Identidade Visual",
-        content: "Cuidadosamente criamos um conjunto de elementos visuais(Logo, Cores, Tipografia, Estilo Gráfico) para sua empresa, tudo projetado para transmitir a personalidade, os valores e a menssagem da sua marca de forma consistente e reconhecível",
+        content: "Cuidadosamente criamos um conjunto de elementos visuais (Logo, Cores, Tipografia, Estilo Gráfico) para sua empresa, tudo projetado para transmitir a personalidade, os valores e a mensagem da sua marca de forma consistente e reconhecível",
     },
 ];
 
-
-export const socialMedia = [
-    {
-        id: "social-media-1",
-        icon: instagram,
-        link: "https://www.instagram.com/",
-    },
-    {
-        id: "social-media-2",
-        icon: facebook,
-        link: "https://www.facebook.com/",
-    },
-    {
-        id: "social-media-3",
-        icon: twitter,
-        link: "https://www.twitter.com/",
-    },
-    {
-        id: "social-media-4",
-        icon: linkedin,
-        link: "https://www.linkedin.com/",
-    },
+export const iphone__imgs = [
+    iphone__img_3,
+    iphone__img_2,
+    iphone__img_1,
 ];
 
 export const client__1 = {
@@ -84,6 +69,7 @@ export const client__1 = {
     feedback: "A qualidade e o comprometimento profissional da Kalinca foram pontos de destaque de um ótimo trabalho que realizamos juntos. Recomendo com segurança!",
     img: client__img_1,
 };
+
 export const client__2 = {
     id: "client-2",
     name: "Guilherme Kuntze",
@@ -91,6 +77,7 @@ export const client__2 = {
     feedback: "Sério, sem palavras para o tanto que você se doa e já entregou e tão pouco tempo, não tenho dúvida da jornada de sucesso que você vai trilhar no marketing. Orgulho demais de ter você no nosso time!",
     img: client__img_2,
 };
+
 export const client__3 = {
     id: "client-3",
     name: "Securi",
@@ -98,6 +85,7 @@ export const client__3 = {
     feedback: "A Kalinca conseguiu traduzir nossa marca em imagens e vídeos criativos e de bom gosto. É um suporte importante para a apresentação do nosso trabalho  e nossas vendas.",
     img: client__img_3,
 };
+
 export const client__4 = {
     id: "client-4",
     name: "Ana Laura Lopes",
@@ -118,15 +106,23 @@ export const client__logos = [
 
 export const faqs = [
     {
-        question: "question 1",
-        answer: "Elit tempor eiusmod dolor sit. Fugiat quis commodo irure sit proident voluptate pariatur adipisicing. Duis ea mollit esse nul"
+        question: "1. Vocês oferecem estratégias personalizadas para diferentes necessidades de negócios?",
+        answer: "Sim, cada negócio é único, e tem seus objetivos. Criamos cada estratégia de forma personalizada, pensando nos objetivos específicos do seu negócio."
     },
     {
-        question: "question 2",
-        answer: "Elit tempor eiusmod dolor sit. Fugiat quis commodo irure sit proident voluptate pariatur adipisicing. Duis ea mollit esse nul"
+        question: "2. Vocês atendem diversos nichos?",
+        answer: "Sim, hoje trabalhamos com varios nichos de áreas diferentes."
     },
     {
-        question: "question 3",
-        answer: "Elit tempor eiusmod dolor sit. Fugiat quis commodo irure sit proident voluptate pariatur adipisicing. Duis ea mollit esse nul"
+        question: "3. Vocês atendem em quais regiões?",
+        answer: "Em todo o Brasil, seu negócio não precisa estar na mesma cidade que nossa sede. Conseguimos atender mesmo de forma remota."
+    },
+    {
+        question: "4. Existe algum acompanhamento de resultados?",
+        answer: "Todo mês será enviado um relatório mensal de resultados, juntamente com uma reunião de alinhamento para as ações do próximo mês."
+    },
+    {
+        question: "5. Meu negócio não tem rede social, vocês fazem essa criação?",
+        answer: "Sim, realizamos a criação da rede social e a identidade visual para o seu negócio."
     },
 ]

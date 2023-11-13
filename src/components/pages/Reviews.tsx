@@ -3,6 +3,8 @@ import style from "../../styles/Reviews.module.css";
 import MousePosition from "../MousePosition";
 import CountUp from "../CountUp";
 import { client__1, client__2, client__3, client__4, client__logos } from "../../constants";
+import RevealMe from "../RevealMe";
+
 
 
 export default function Reviews() {
@@ -50,191 +52,204 @@ export default function Reviews() {
     }
 
     return (
-        <section onMouseEnter={() => setShowCountUp(true)} onMouseMove={() => moveBlob()} className={style.reviews} id="reviews">
+        <section onMouseEnter={() => {
+            setTimeout(()=> {
+                setShowCountUp(true)
+            }, 1000);
+        }} onMouseMove={() => moveBlob()} className={`${style.reviews} noselect`} id="reviews">
+
 
             <div className={`${style.reviews__container} container`}>
 
+                <RevealMe delay={1000} reset style={{
+                    position: "absolute",
+                    left: 0,
+                    top: 0,
+                    width: "100%",
+                    height: "100vh"
+                }} origin="bottom">
+                    <div ref={blobRef} className={`${style.blob}`} />
+                </RevealMe>
 
-                <h1 className={`${style.reviews__title} light__text title`}>Feedbacks</h1>
+                    <div className={`${style.blur}`} />
 
-                <div ref={blobRef} className={`${style.blob}`} />
-                <div className={`${style.blur}`} />
+                    <h1 className={`${style.reviews__title} light__text title`}>Feedbacks</h1>
 
-                <div className={`${style.reviews__data} grid`}>
+                    <div className={`${style.reviews__data} grid`}>
 
-                    <div className={`${style.review__item}`}>
-                        <div className={style.review__header}>
-                            <img draggable={false} className={style.client__img} src={client__2.img} />
-                            <div>
-                                <h2 className={`${style.name} light__text`}>{client__2.name}</h2>
-                                <h3 className={`${style.business} light__text`}>{client__2.business}</h3>
-                            </div>
-                        </div>
-                        <div className={style.review__body}>
-                            <p className={`${style.feedback} light__text`}>{client__2.feedback}</p>
-                        </div>
-                    </div>
-
-                    <div className={`${style.review__item} ${style.show}`}>
-                        <div className={style.review__header}>
-                            <img draggable={false} className={style.client__img} src={client__3.img} />
-                            <div>
-                                <h2 className={`${style.name} light__text`}>{client__3.name}</h2>
-                                <h3 className={`${style.business} light__text`}>{client__3.business}</h3>
-                            </div>
-                        </div>
-                        <div className={style.review__body}>
-                            <p className={`${style.feedback} light__text`}>{client__3.feedback}</p>
-                        </div>
-                    </div>
-
-                    <div className={`${style.review__item} ${style.show}`}>
-                        <div className={style.review__header}>
-                            <img draggable={false} className={style.client__img} src={client__4.img} />
-                            <div>
-                                <h2 className={`${style.name} light__text`}>{client__4.name}</h2>
-                                <h3 className={`${style.business} light__text`}>{client__4.business}</h3>
-                            </div>
-                        </div>
-                        <div className={style.review__body}>
-                            <p className={`${style.feedback} light__text`}>{client__4.feedback}</p>
-                        </div>
-                    </div>
-
-                    <div className={`${style.review__wrap}`}>
-                        <div className={`${style.review__item_small}`}>
-                            <img draggable={false} className={style.client__img_small} src={client__3.img} />
-                            <div className={`${style.review__data} grid`}>
+                        <div className={`${style.review__item}`}>
+                            <div className={style.review__header}>
+                                <img draggable={false} className={style.client__img} src={client__2.img} />
                                 <div>
-                                    <h2 className={`${style.name__small} light__text`}>{client__3.name}</h2>
-                                    <h3 className={`${style.business__small} light__text`}>{client__3.business}</h3>
+                                    <h2 className={`${style.name} light__text`}>{client__2.name}</h2>
+                                    <h3 className={`${style.business} light__text`}>{client__2.business}</h3>
                                 </div>
-                                <p className={`${style.feedback__small} light__text`}>{client__3.feedback}</p>
+                            </div>
+                            <div className={style.review__body}>
+                                <p className={`${style.feedback} light__text`}>{client__2.feedback}</p>
                             </div>
                         </div>
 
-                        <div className={`${style.review__item_small}`}>
-                            <img draggable={false} className={style.client__img_small} src={client__4.img} />
-                            <div className={`${style.review__data} grid`}>
+                        <div className={`${style.review__item} ${style.show}`}>
+                            <div className={style.review__header}>
+                                <img draggable={false} className={style.client__img} src={client__3.img} />
                                 <div>
-                                    <h2 className={`${style.name__small} light__text`}>{client__4.name}</h2>
-                                    <h3 className={`${style.business__small} light__text`}>{client__4.business}</h3>
+                                    <h2 className={`${style.name} light__text`}>{client__3.name}</h2>
+                                    <h3 className={`${style.business} light__text`}>{client__3.business}</h3>
                                 </div>
-                                <p className={`${style.feedback__small} light__text`}>{client__4.feedback}</p>
+                            </div>
+                            <div className={style.review__body}>
+                                <p className={`${style.feedback} light__text`}>{client__3.feedback}</p>
                             </div>
                         </div>
+
+                        <div className={`${style.review__item} ${style.show}`}>
+                            <div className={style.review__header}>
+                                <img draggable={false} className={style.client__img} src={client__4.img} />
+                                <div>
+                                    <h2 className={`${style.name} light__text`}>{client__4.name}</h2>
+                                    <h3 className={`${style.business} light__text`}>{client__4.business}</h3>
+                                </div>
+                            </div>
+                            <div className={style.review__body}>
+                                <p className={`${style.feedback} light__text`}>{client__4.feedback}</p>
+                            </div>
+                        </div>
+
+                        <div className={`${style.review__wrap}`}>
+                            <div className={`${style.review__item_small}`}>
+                                <img draggable={false} className={style.client__img_small} src={client__3.img} />
+                                <div className={`${style.review__data} grid`}>
+                                    <div>
+                                        <h2 className={`${style.name__small} light__text`}>{client__3.name}</h2>
+                                        <h3 className={`${style.business__small} light__text`}>{client__3.business}</h3>
+                                    </div>
+                                    <p className={`${style.feedback__small} light__text`}>{client__3.feedback}</p>
+                                </div>
+                            </div>
+
+                            <div className={`${style.review__item_small}`}>
+                                <img draggable={false} className={style.client__img_small} src={client__4.img} />
+                                <div className={`${style.review__data} grid`}>
+                                    <div>
+                                        <h2 className={`${style.name__small} light__text`}>{client__4.name}</h2>
+                                        <h3 className={`${style.business__small} light__text`}>{client__4.business}</h3>
+                                    </div>
+                                    <p className={`${style.feedback__small} light__text`}>{client__4.feedback}</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div className={`${style.brand__wrapper}`}>
+                            <div className={`${style.square__wrapper} grid`}>
+                                <div className={`${style.square}`}>
+                                    <div>
+                                        <p className={style.square__number}>
+                                            {showCountUp ? <CountUp timer={15} end={1050} /> : 0}
+                                            <span className={`material-icons-outlined ${style.square__icon}`}>add</span>
+                                        </p>
+                                        <p className={style.square__text}>Visualizações Orgânicas</p>
+                                    </div>
+                                </div>
+
+                                <div className={`${style.square}`}>
+                                    <div>
+                                        <p className={style.square__number}>
+                                            {showCountUp ? <CountUp timer={25} end={100} /> : 0}
+                                            <span className={`material-icons-outlined ${style.square__icon}`}>add</span>
+                                        </p>
+                                        <p className={style.square__text}>Posts Feitos</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className={style.logos__wrapper}>
+                                <div className={`${style.logos}`}>
+                                    <div className={`${style.slider}`}>
+                                        {client__logos.map((imgSource, index) => {
+                                            return (
+                                                <div key={index}>
+                                                    <img draggable={false} src={imgSource} />
+                                                </div>
+                                            )
+                                        })}
+                                    </div>
+                                    <div className={`${style.slider}`}>
+                                        {client__logos.map((imgSource, index) => {
+                                            return (
+                                                <div key={index}>
+                                                    <img draggable={false} src={imgSource} />
+                                                </div>
+                                            )
+                                        })}
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div className={`${style.review__item}`}>
+                            <div className={style.review__header}>
+                                <img draggable={false} className={style.client__img} src={client__1.img} />
+                                <div>
+                                    <h2 className={`${style.name} light__text`}>{client__1.name}</h2>
+                                    <h3 className={`${style.business} light__text`}>{client__1.business}</h3>
+                                </div>
+                            </div>
+                            <div className={style.review__body}>
+                                <p className={`${style.feedback} light__text`}>{client__1.feedback}</p>
+                            </div>
+                        </div>
+
+                        <div className={`${style.brand__wrapper} ${style.show}`}>
+                            <div className={`${style.square__wrapper} grid`}>
+                                <div className={`${style.square}`}>
+                                    <div>
+                                        <p className={style.square__number}>
+                                            <CountUp timer={15} end={1050} />
+                                            <span className={`material-icons-outlined ${style.square__icon}`}>add</span>
+                                        </p>
+                                        <p className={style.square__text}>Visualizaçoes Organicas</p>
+                                    </div>
+                                </div>
+
+                                <div className={`${style.square}`}>
+                                    <div>
+                                        <p className={style.square__number}>
+                                            <CountUp timer={25} end={100} />
+                                            <span className={`material-icons-outlined ${style.square__icon}`}>add</span>
+                                        </p>
+                                        <p className={style.square__text}>Posts Feitos</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className={style.logos__wrapper}>
+                                <div className={`${style.logos}`}>
+                                    <div className={`${style.slider}`}>
+                                        {client__logos.map((imgSource, index) => {
+                                            return (
+                                                <div key={index}>
+                                                    <img draggable={false} src={imgSource} />
+                                                </div>
+                                            )
+                                        })}
+                                    </div>
+                                    <div className={`${style.slider}`}>
+                                        {client__logos.map((imgSource, index) => {
+                                            return (
+                                                <div key={index}>
+                                                    <img draggable={false} src={imgSource} />
+                                                </div>
+                                            )
+                                        })}
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
                     </div>
-
-                    <div className={`${style.brand__wrapper}`}>
-                        <div className={`${style.square__wrapper} grid`}>
-                            <div className={`${style.square}`}>
-                                <div>
-                                    <p className={style.square__number}>
-                                        {showCountUp ? <CountUp timer={15} end={1050}/> : 0} 
-                                        <span className={`material-icons-outlined ${style.square__icon}`}>add</span>
-                                    </p>
-                                    <p className={style.square__text}>Visualizaçoes Organicas</p>
-                                </div>
-                            </div>
-
-                            <div className={`${style.square}`}>
-                                <div>
-                                    <p className={style.square__number}>
-                                        {showCountUp ? <CountUp timer={25} end={100} /> : 0}
-                                        <span className={`material-icons-outlined ${style.square__icon}`}>add</span>
-                                    </p>
-                                    <p className={style.square__text}>Posts Feitos</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className={style.logos__wrapper}>
-                            <div className={`${style.logos}`}>
-                                <div className={`${style.slider}`}>
-                                    {client__logos.map((imgSource, index) => {
-                                        return (
-                                            <div key={index}>
-                                                <img draggable={false} src={imgSource} />
-                                            </div>
-                                        )
-                                    })}
-                                </div>
-                                <div className={`${style.slider}`}>
-                                    {client__logos.map((imgSource, index) => {
-                                        return (
-                                            <div key={index}>
-                                                <img draggable={false} src={imgSource} />
-                                            </div>
-                                        )
-                                    })}
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-
-                    <div className={`${style.review__item}`}>
-                        <div className={style.review__header}>
-                            <img draggable={false} className={style.client__img} src={client__1.img} />
-                            <div>
-                                <h2 className={`${style.name} light__text`}>{client__1.name}</h2>
-                                <h3 className={`${style.business} light__text`}>{client__1.business}</h3>
-                            </div>
-                        </div>
-                        <div className={style.review__body}>
-                            <p className={`${style.feedback} light__text`}>{client__1.feedback}</p>
-                        </div>
-                    </div>
-
-                    <div className={`${style.brand__wrapper} ${style.show}`}>
-                        <div className={`${style.square__wrapper} grid`}>
-                            <div className={`${style.square}`}>
-                                <div>
-                                    <p className={style.square__number}>
-                                        <CountUp timer={15} end={1050} />
-                                        <span className={`material-icons-outlined ${style.square__icon}`}>add</span>
-                                    </p>
-                                    <p className={style.square__text}>Visualizaçoes Organicas</p>
-                                </div>
-                            </div>
-
-                            <div className={`${style.square}`}>
-                                <div>
-                                    <p className={style.square__number}>
-                                        <CountUp timer={25} end={100} />
-                                        <span className={`material-icons-outlined ${style.square__icon}`}>add</span>
-                                    </p>
-                                    <p className={style.square__text}>Posts Feitos</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className={style.logos__wrapper}>
-                            <div className={`${style.logos}`}>
-                                <div className={`${style.slider}`}>
-                                    {client__logos.map((imgSource, index) => {
-                                        return (
-                                            <div key={index}>
-                                                <img draggable={false} src={imgSource} />
-                                            </div>
-                                        )
-                                    })}
-                                </div>
-                                <div className={`${style.slider}`}>
-                                    {client__logos.map((imgSource, index) => {
-                                        return (
-                                            <div key={index}>
-                                                <img draggable={false} src={imgSource} />
-                                            </div>
-                                        )
-                                    })}
-                                </div>
-                            </div>
-                        </div>
-                        
-                    </div>
-
-                </div>
 
             </div>
 

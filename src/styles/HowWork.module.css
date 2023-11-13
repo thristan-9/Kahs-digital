@@ -1,11 +1,12 @@
 .howWork__container {
     padding-top: 5rem;
     position: relative;
+    overflow: hidden;
 }
 
 .top__container {
     text-align: center;
-    height: 12rem;
+    height: 10rem;
 }
 
 .top__title {
@@ -24,7 +25,7 @@
     width: 90%;
     margin-inline: auto;
     gap: 2rem;
-    margin-bottom: 9rem;
+    margin-bottom: 5rem;
 }
 
 .middle__box {
@@ -42,31 +43,38 @@
 
 .box__text {
     color: var(--light-color);
-}
-
-.bgWhite {
-    background-color: var(--light-color);
-    width: 100%;
-    height: 30rem;
-    min-height: 500px;
-    border-radius: 5px;
+    font-size: 1.2rem;
 }
 
 .iphone_slide_wrapper {
     position: relative;
     width: auto;
-    max-width: 85%;
-    margin-top: -35rem;
+    max-width: 90%;
     left: 50%;
     transform: translate(-50%, 0);
 }
 
-.iphone__frame {
+.iphone_slide_wrapper::before {
+    content: "";
+    position: absolute;
+    background-color: var(--light-color);
+    left: -50%;
+    width: 200%;
+    height: 71%;
+    margin-top: 22%;
+    border-radius: 5px;
+}
+
+.slider {
+    position: relative;
     background-image: url(../assets/iphone__frame.png);
     background-repeat: no-repeat;
     width: 100%;
     height: 100%;
     background-size: contain;
+    left: 50%;
+    transform: translateX(-50%);
+    overflow: hidden;
 }
 
 .iphone__frame_img {
@@ -75,34 +83,49 @@
     width: 100%;
 }
 
-.slider {
+.img__active {
+    display: block;
     position: absolute;
-    overflow: hidden;
-    display: flex;
-    gap: 10px;
-    height: 89.5%;
+    opacity: 0.1;
+    top: 50%;
+    left: 50%;
+    height: 97%;
     width: auto;
-    max-width: 90%;
-    top: 1%;
-    left: 5%;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    border-radius: 35px;
+    object-fit: cover;
+    translate: -50% -51%;
+    animation: smooth-appear .5s ease forwards;
 }
 
-.slider::-webkit-scrollbar {
+.img {
     display: none;
 }
 
-.iphone__img {
-    height: 100%;
-    width: 100%;
-    scroll-snap-align: start;
-    object-fit: cover;
+@keyframes smooth-appear {
+    to {
+        opacity: 1;
+    }
 }
 
-.slider__nav {
+.icon__wrapper {
+    position: absolute;
+    top: 50%;
+    display: none;
+    cursor: pointer;
+}
+
+.slider__icons {
+    font-size: 2rem;
+}
+
+.icon__left {
+    left: -7%;
+}
+
+.icon__right {
+    right: -7%
+}
+
+.dots {
     display: flex;
     gap: 1rem;
     justify-content: center;
@@ -110,16 +133,17 @@
     width: 100%;
 }
 
-.slider__nav_dot {
-    width: 1rem;
-    height: 1rem;
+.dot {
+    width: 1.5rem;
+    aspect-ratio: 1;
     background-color: var(--light-color);
     border-radius: 50%;
     transition: .3s;
     opacity: 0.75;
+    cursor: pointer;
 }
 
-.slider__nav_dot:hover {
+.dot:hover {
     background-color: #606060;
 }
 
@@ -144,40 +168,31 @@
 }
 
 
-@media screen and (min-width: 300px) {
-    .slider {
-        height: 89.5%;
-        width: auto;
-        max-width: 90%;
-        top: 1%;
-        left: 5%;
-    }
-}
 
 @media screen and (min-width: 500px) {
     .iphone_slide_wrapper {
-        width: 60%;
+        max-width: 80%;
     }
 }
 
-@media screen and (min-width: 750px) {
+@media screen and (min-width: 640px) {
     .iphone_slide_wrapper {
-        margin-top: -51rem;
-    }
-
-    .bgWhite {
-        height: 45rem;
+        max-width: 60%;
     }
 }
 
 @media screen and (min-width: 1150px) {
+    .icon__wrapper {
+        display: initial;
+    }
+
     .top__container {
         height: 30vh;
     }
 
     .bottom__container {
         height: 15vh;
-        padding-top: 10rem;
+        margin-top: 10rem;
         padding-block: initial;
     }
 
@@ -214,33 +229,25 @@
         color: var(--text-color);
     }
 
-    .iphone__frame {
-        width: auto
-    }
-
     .iphone_slide_wrapper {
         position: absolute;
         height: 85vh;
         width: auto;
-        top: 28vh;
+        top: -15%;
         margin-top: initial;
     }
 
-    .slider {
-        height: 82.5vh;
-        width: auto;
-        top: 1%;
-        left: 4.8%;
-        border-radius: 45px;
-    }
-}
-
-@media screen and (min-width: 1600px) {
-    .iphone_slide_wrapper {
-        top: 26vh;
+    .img__active {
+        height: 97%;
+        translate: -50% -50.5%;
     }
 
-    .slider {
-        border-radius: 55px;
+    .dot {
+        width: 1.2rem;
     }
+
+    .iphone_slide_wrapper::before {
+        content: none;
+    }
+
 }

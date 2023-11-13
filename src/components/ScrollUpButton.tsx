@@ -26,7 +26,7 @@ export default function ScrollUpButton() {
 
     return (
         <div>
-            <span onClick={() => scrollUp()} className={`material-icons-outlined ${style.scrollUp__icon} ${scrollUpBtn && style.show__btn}`}>arrow_circle_up</span>
+            <span onClick={() => scrollUp()} className={`material-icons-outlined ${style.scrollUp__icon} ${scrollUpBtn && style.show__btn} noselect`}>arrow_circle_up</span>
         </div>
     );
 }

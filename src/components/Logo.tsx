@@ -1,14 +1,13 @@
 import style from '../styles/Logo.module.css'
+import logoBlack from '../assets/kash__logo_black.png'
+import logoWhite from '../assets/kash__logo_white.png'
 
 
 export default function Logo({ secondary = false }) {
   return (
     <div className={style.logo}>
       <a href="#">
-          <div className={`${style.logo__wrapper}`}>
-              <h2 className={`${style.logoTitle} ${secondary && style.secondary}`}>KAHS</h2>
-              <h3 className={`${style.logoSubTitle} ${secondary && style.secondary}`}>DIGITAL</h3>
-          </div>
+        <img className={style.logoImg} src={secondary ? logoWhite : logoBlack}/>
       </a>
     </div>
   )
