@@ -2,7 +2,7 @@
   "name": "kahs-digital",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://thristan-9.github.io/Kahs-digital",
+  "homepage": "https://thristan-9.github.io/Kahs-digital/",
   "type": "module",
   "scripts": {
     "dev": "vite",
