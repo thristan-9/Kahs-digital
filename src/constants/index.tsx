@@ -36,8 +36,8 @@ export const navLinks = [
 export const services = [
     {
         id: "services-1",
-        title: "Estrategias de Mídias Sociais",
-        content: "Desenvolvemos estrategias efetivas para otimizar sua presença nas mídias sociais, engajar seguidores, promover produtos ou serviços e aumentar o reconhecimento da marca.",
+        title: "Estratégias de Mídias Sociais",
+        content: "Desenvolvemos estratégias efetivas para otimizar sua presença nas mídias sociais, engajar seguidores, promover produtos ou serviços e aumentar o reconhecimento da marca.",
     },
     {
         id: "services-2",
