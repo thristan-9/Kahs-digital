@@ -10,7 +10,7 @@
 
 .hero__title {
   margin-bottom: var(--mb-1-5);
-  font-size: clamp(2.5rem, 4vw, 5rem);
+  font-size: clamp(2rem, 4vw, 4.5rem);
 }
 
 .hero__description {
@@ -58,6 +58,10 @@
   bottom: 0;
 }
 
+.hero__button {
+  display: none;
+}
+
 @media screen and (min-width: 300px) {
   .hero__container {
     padding-top: var(--header-height);
@@ -95,6 +99,10 @@
     display: flex;
     gap: 1rem;
     align-items: center;
+  }
+
+  .hero__button {
+    display: block;
   }
 
   .icons__wrapper {

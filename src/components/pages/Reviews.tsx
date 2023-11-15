@@ -34,7 +34,7 @@ export default function Reviews() {
         const maxX = (width / 2) + 150;
 
         const minY = (height / 2) - 50;
-        const maxY = (height / 2) + 130;
+        const maxY = (height / 2) + 50;
 
         if (mousePosition.x <= minX) {
             mousePosition.x = minX;
@@ -55,7 +55,7 @@ export default function Reviews() {
         <section onMouseEnter={() => {
             setTimeout(() => {
                 setShowCountUp(true)
-            }, 1000);
+            }, 500);
         }} onMouseMove={() => moveBlob()} className={`${style.reviews} noselect`} id="reviews">
 
 
@@ -145,20 +145,20 @@ export default function Reviews() {
                             <div className={`${style.square}`}>
                                 <div>
                                     <p className={style.square__number}>
-                                        {showCountUp ? <CountUp timer={15} end={1050} /> : 0}
                                         <span className={`material-icons-outlined ${style.square__icon}`}>add</span>
+                                        {showCountUp ? <CountUp timer={30} end={50} /> : 0}
                                     </p>
-                                    <p className={style.square__text}>Visualizações Orgânicas</p>
+                                    <p className={style.square__text}>Clientes<br/> Satisfeitos</p>
                                 </div>
                             </div>
 
                             <div className={`${style.square}`}>
                                 <div>
                                     <p className={style.square__number}>
-                                        {showCountUp ? <CountUp timer={25} end={100} /> : 0}
                                         <span className={`material-icons-outlined ${style.square__icon}`}>add</span>
+                                        {showCountUp ? <CountUp timer={10} end={17000} /> : 0}
                                     </p>
-                                    <p className={style.square__text}>Posts Feitos</p>
+                                    <p className={style.square__text}>Visualizações em 24 hrs</p>
                                 </div>
                             </div>
                         </div>
@@ -206,20 +206,20 @@ export default function Reviews() {
                             <div className={`${style.square}`}>
                                 <div>
                                     <p className={style.square__number}>
-                                        <CountUp timer={15} end={1050} />
+                                        <CountUp timer={30} end={50} />
                                         <span className={`material-icons-outlined ${style.square__icon}`}>add</span>
                                     </p>
-                                    <p className={style.square__text}>Visualizaçoes Organicas</p>
+                                    <p className={style.square__text}>Clientes Satisfeitos</p>
                                 </div>
                             </div>
 
                             <div className={`${style.square}`}>
                                 <div>
                                     <p className={style.square__number}>
-                                        <CountUp timer={25} end={100} />
+                                        <CountUp timer={10} end={17000} />
                                         <span className={`material-icons-outlined ${style.square__icon}`}>add</span>
                                     </p>
-                                    <p className={style.square__text}>Posts Feitos</p>
+                                    <p className={style.square__text}>Visualizações em 24 hrs</p>
                                 </div>
                             </div>
                         </div>

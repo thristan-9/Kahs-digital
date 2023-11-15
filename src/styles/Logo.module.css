@@ -1,8 +1,13 @@
-
 .logo {
     width: fit-content;
 }
 
 .logoImg {
-    width: 5rem;
+    width: 4rem;
+}
+
+@media screen and (min-width: 1150px) {
+    .logoImg {
+        width: 5rem;
+    }
 }

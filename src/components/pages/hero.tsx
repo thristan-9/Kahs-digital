@@ -20,7 +20,7 @@ export default function Hero() {
           </p>
 
           <div className={`${style.buttons__wrapper}`}>
-            <a href="#services">
+            <a className={style.hero__button} href="#services">
               <Button label="Serviços" />
             </a>
 

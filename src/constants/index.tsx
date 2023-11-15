@@ -81,7 +81,7 @@ export const client__2 = {
 export const client__3 = {
     id: "client-3",
     name: "Securi",
-    business: "Seguranca do trabalho",
+    business: "Segurança do trabalho",
     feedback: "A Kalinca conseguiu traduzir nossa marca em imagens e vídeos criativos e de bom gosto. É um suporte importante para a apresentação do nosso trabalho  e nossas vendas.",
     img: client__img_3,
 };
