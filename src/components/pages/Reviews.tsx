@@ -34,7 +34,7 @@ export default function Reviews() {
         const maxX = (width / 2) + 150;
 
         const minY = (height / 2) - 50;
-        const maxY = (height / 2) + 50;
+        const maxY = (height / 2) + 150;
 
         if (mousePosition.x <= minX) {
             mousePosition.x = minX;
@@ -155,8 +155,7 @@ export default function Reviews() {
                             <div className={`${style.square}`}>
                                 <div>
                                     <p className={style.square__number}>
-                                        <span className={`material-icons-outlined ${style.square__icon}`}>add</span>
-                                        {showCountUp ? <CountUp timer={10} end={17000} /> : 0}
+                                        {showCountUp ? <CountUp timer={15} end={17000} /> : 0}
                                     </p>
                                     <p className={style.square__text}>Visualizações em 24 hrs</p>
                                 </div>
@@ -206,8 +205,8 @@ export default function Reviews() {
                             <div className={`${style.square}`}>
                                 <div>
                                     <p className={style.square__number}>
-                                        <CountUp timer={30} end={50} />
                                         <span className={`material-icons-outlined ${style.square__icon}`}>add</span>
+                                        <CountUp timer={30} end={50} />
                                     </p>
                                     <p className={style.square__text}>Clientes Satisfeitos</p>
                                 </div>
@@ -216,8 +215,7 @@ export default function Reviews() {
                             <div className={`${style.square}`}>
                                 <div>
                                     <p className={style.square__number}>
-                                        <CountUp timer={10} end={17000} />
-                                        <span className={`material-icons-outlined ${style.square__icon}`}>add</span>
+                                        <CountUp timer={15} end={17000} />
                                     </p>
                                     <p className={style.square__text}>Visualizações em 24 hrs</p>
                                 </div>
