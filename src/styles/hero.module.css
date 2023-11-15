@@ -3,6 +3,10 @@
   position: relative;
 }
 
+.hidden {
+  opacity: 0;
+}
+
 .hero__data {
   text-align: center;
   z-index: var(--z-tooltip);

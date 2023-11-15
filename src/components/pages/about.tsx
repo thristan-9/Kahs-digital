@@ -1,12 +1,22 @@
+import { useState, useEffect } from "react";
 import style from '../../styles/About.module.css'
 import cellphone from '../../assets/iphone__img_insta.webp'
 import RevealMe from '../RevealMe'
 
 export default function About() {
+
+    const [showPage, setShowPage] = useState(false);
+
+    useEffect(() => {
+        setTimeout(() => {
+            setShowPage(true);
+        }, 150);
+    }, []);
+
     return (
         <section id='about'>
 
-            <div className={`${style.about__container} noselect`}>
+            <div className={`${style.about__container} ${showPage ? undefined : style.hidden} noselect`}>
 
                 <RevealMe delay={1} origin="left" reset>
                     <div className={style.about__wrapper}>

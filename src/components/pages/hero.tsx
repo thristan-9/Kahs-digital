@@ -1,16 +1,25 @@
+import {useState, useEffect} from "react";
 import style from "../../styles/Hero.module.css";
 import heroImg from "../../assets/hero__img.webp";
 import Button from "../Button";
 import { AiOutlineInstagram, AiOutlineLinkedin, AiOutlineWhatsApp } from 'react-icons/ai';
 import RevealMe from "../RevealMe";
 
-
 export default function Hero() {
+
+  const [showPage, setShowPage] = useState(false);
+
+  useEffect(()=> {
+    setTimeout(()=>{
+      setShowPage(true);
+    }, 150);
+  }, []);
+
   return (
     <section id="hero" className={style.hero}>
       <RevealMe origin="bottom">
-        
-        <div className={`${style.hero__container} container grid noselect`}>
+
+        <div className={`${style.hero__container} ${showPage ? undefined : style.hidden} container grid noselect`}>
 
           <div className={`${style.hero__data}`}>
 
