@@ -30,11 +30,17 @@ export default function Reviews() {
         const width = window.innerWidth;
         const height = window.innerHeight;
 
+        console.log("window.innerHeight", window.innerHeight)
+
+        if (window.innerHeight <= 1150) {
+            window.innerHeight = window.innerHeight + 150;
+        }
+
         const minX = (width / 2) - 150;
         const maxX = (width / 2) + 150;
 
         const minY = (height / 2) - 50;
-        const maxY = (height / 2) + 150;
+        const maxY = (height / 2) + 120;
 
         if (mousePosition.x <= minX) {
             mousePosition.x = minX;
@@ -58,7 +64,6 @@ export default function Reviews() {
             }, 500);
         }} onMouseMove={() => moveBlob()} className={`${style.reviews} noselect`} id="reviews">
 
-
             <div className={`${style.reviews__container} container`}>
 
                 <RevealMe delay={600} style={{
@@ -70,7 +75,6 @@ export default function Reviews() {
                 }} origin="bottom">
                     <div ref={blobRef} className={`${style.blob}`} />
                 </RevealMe>
-
                 <div className={`${style.blur}`} />
 
                 <h1 className={`${style.reviews__title} light__text title`}>Feedbacks</h1>
@@ -146,7 +150,7 @@ export default function Reviews() {
                                 <div>
                                     <p className={style.square__number}>
                                         <span className={`material-icons-outlined ${style.square__icon}`}>add</span>
-                                        {showCountUp ? <CountUp timer={30} end={50} /> : 0}
+                                        {showCountUp ? <CountUp timer={40} end={50} /> : 0}
                                     </p>
                                     <p className={style.square__text}>Clientes<br/> Satisfeitos</p>
                                 </div>
@@ -155,7 +159,7 @@ export default function Reviews() {
                             <div className={`${style.square}`}>
                                 <div>
                                     <p className={style.square__number}>
-                                        {showCountUp ? <CountUp timer={10} end={17000} /> : 0}
+                                        {showCountUp ? <CountUp timer={1} end={17000} /> : 0}
                                     </p>
                                     <p className={style.square__text}>Visualizações em 24 hrs</p>
                                 </div>
@@ -206,7 +210,7 @@ export default function Reviews() {
                                 <div>
                                     <p className={style.square__number}>
                                         <span className={`material-icons-outlined ${style.square__icon}`}>add</span>
-                                        <CountUp timer={30} end={50} />
+                                        <CountUp timer={40} end={50} />
                                     </p>
                                     <p className={style.square__text}>Clientes Satisfeitos</p>
                                 </div>
@@ -215,7 +219,7 @@ export default function Reviews() {
                             <div className={`${style.square}`}>
                                 <div>
                                     <p className={style.square__number}>
-                                        <CountUp timer={10} end={17000} />
+                                        <CountUp timer={1} end={17000} />
                                     </p>
                                     <p className={style.square__text}>Visualizações em 24 hrs</p>
                                 </div>

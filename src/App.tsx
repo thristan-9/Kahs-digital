@@ -17,9 +17,7 @@ const App = () => (
     <Header />
     <main className="main">
       <div className="bg__container bg__top_container">
-        <RevealMe origin="bottom">
-          <Hero/>
-        </RevealMe>
+        <Hero/>
         <About />
       </div>
       <HowWork/>

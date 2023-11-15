@@ -219,6 +219,7 @@
 }
 
 @media screen and (min-width: 1150px) {
+
     .slider {
         animation: slide 17s infinite linear;
     }
@@ -259,10 +260,6 @@
 
     .review__body {
         margin-top: 3rem;
-    }
-
-    .blob {
-        height: 50%;
     }
 
     .client__img {
@@ -339,6 +336,10 @@
         font-size: 1rem;
     }
 
+    .blob {
+        height: 50%;
+    }
+
     .name__small {
         font-size: 1.25rem;
     }
@@ -369,6 +370,8 @@
     .square__icon {
         font-size: 3rem;
     }
+
+
 }
 
 @media screen and (min-width: 2250px) {
