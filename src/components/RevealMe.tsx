@@ -3,7 +3,6 @@ import scrollReveal from "./ScrollReveal";
 
 export default function RevealMe({ children, style, reset = false, delay = 150, origin = "top" }) {
   const divRef = useRef<HTMLElement>(null);
-  let showChildren = false;
 
   useEffect(() => {
     if (divRef.current) {
@@ -14,7 +13,6 @@ export default function RevealMe({ children, style, reset = false, delay = 150, 
         delay: delay,
         reset: reset
       });
-      showChildren = true;
     }
   }, []);
 
@@ -24,7 +22,7 @@ export default function RevealMe({ children, style, reset = false, delay = 150, 
       style={{ position: "relative", width: "auto", height: "100%", ...style }}
       className="scroll-section"
     >
-      {showChildren && children}
+      {children}
     </div>
   );
 }
