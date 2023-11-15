@@ -61,7 +61,7 @@ export default function Reviews() {
 
             <div className={`${style.reviews__container} container`}>
 
-                <RevealMe delay={1000} style={{
+                <RevealMe delay={600} style={{
                     position: "absolute",
                     left: 0,
                     top: 0,

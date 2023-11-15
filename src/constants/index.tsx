@@ -42,7 +42,7 @@ export const services = [
     {
         id: "services-2",
         title: "Criação de Conteúdo",
-        content: "Criamos conteúdos impactantes que se conecta com o seu público alvo como textos, imagens e vídeos que sejam relevantes e valiosos para a sua audiência.",
+        content: "Criamos conteúdos impactantes que se conecta com o seu público alvo como textos, imagens e vídeos que sejam relevantes e valiosos para a sua audiência. Oferecemos também cobertura completa de eventos, capturando vídeos e fotos alinhados às tendências globais (trend).",
     },
     {
         id: "services-3",

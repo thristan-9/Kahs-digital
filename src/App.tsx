@@ -8,6 +8,8 @@ import Faqs from './components/pages/Faqs';
 import Contact from './components/pages/Contact';
 import ScrollUpButton from './components/ScrollUpButton'
 import Footer from './components/Footer'
+import RevealMe from "./components/RevealMe";
+
 
 
 const App = () => (
@@ -15,20 +17,27 @@ const App = () => (
     <Header />
     <main className="main">
       <div className="bg__container bg__top_container">
-        <Hero/>
+        <RevealMe origin="bottom">
+          <Hero/>
+        </RevealMe>
         <About />
       </div>
       <HowWork/>
       <div className="bg__container">
-        <Services />
+        <RevealMe reset origin="left">
+          <Services />
+        </RevealMe>
       </div>
       <Reviews />
       <div className="bg__container">
-        <Faqs />
+        <RevealMe origin="left">
+          <Faqs />
+        </RevealMe>
+
         <Contact />
       </div>
-      <ScrollUpButton />
     </main>
+    <ScrollUpButton />
     <Footer />
   </div>
 )

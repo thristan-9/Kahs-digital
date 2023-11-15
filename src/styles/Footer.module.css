@@ -1,7 +1,7 @@
 .footer {
     position: relative;
     overflow: hidden;
-    height: 30vh;
+    height: 20vh;
 }
 
 .blob {
@@ -19,7 +19,7 @@
     align-items: center;
     justify-content: space-between;
     z-index: var(--z-tooltip);
-    height: 30vh;
+    height: 20vh;
 }
 
 .nav__list {

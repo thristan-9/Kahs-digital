@@ -94,12 +94,8 @@
     width: 50%;
     justify-content: space-around;
     align-items: center;
-    animation: slide 20s infinite linear;
+    animation: slide 17s infinite linear;
     column-gap: 2rem;
-}
-
-.logos__wrapper:hover .slider {
-    animation-play-state: paused;
 }
 
 @keyframes slide {
@@ -228,6 +224,10 @@
 
     .logos__wrapper::before {
         width: 90px;
+    }
+
+    .logos__wrapper:hover .slider {
+        animation-play-state: paused;
     }
 
     .review__item_small {

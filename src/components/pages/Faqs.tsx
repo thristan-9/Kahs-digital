@@ -1,8 +1,6 @@
 import { useRef, useState, useEffect } from "react";
 import style from "../../styles/Faqs.module.css";
 import { faqs } from "../../constants";
-import RevealMe from "../RevealMe";
-
 
 export default function Faqs() {
 
@@ -53,42 +51,39 @@ export default function Faqs() {
 
                 <div className={`${style.faqs__data}`}>
 
-                    <RevealMe origin="left">
 
-                        <div onClick={() => move("left")} className={`${style.icon__wrapper} ${style.icon__left} noselect`}>
-                            <span className={`material-icons-outlined ${style.faqs__icon}`}>arrow_back_ios</span>
-                        </div>
+                    <div onClick={() => move("left")} className={`${style.icon__wrapper} ${style.icon__left} noselect`}>
+                        <span className={`material-icons-outlined ${style.faqs__icon}`}>arrow_back_ios</span>
+                    </div>
 
-                        <div ref={sliderRef} className={style.slider}>
-                            {faqs.map((item, index) => {
-                                return (
-                                    <div className={`${index === 0 ? (style.slide__active + " " + style.slide__animation_right) : style.slide}`} key={index}>
-                                        <h2 className={style.slide__title}>
-                                            {item.question}
-                                        </h2>
-                                        <div className={style.slide__description_center}>
-                                            <p className={style.slide__description}>
-                                                {item.answer}
-                                            </p>
-                                        </div>
+                    <div ref={sliderRef} className={style.slider}>
+                        {faqs.map((item, index) => {
+                            return (
+                                <div className={`${index === 0 ? (style.slide__active + " " + style.slide__animation_right) : style.slide}`} key={index}>
+                                    <h2 className={style.slide__title}>
+                                        {item.question}
+                                    </h2>
+                                    <div className={style.slide__description_center}>
+                                        <p className={style.slide__description}>
+                                            {item.answer}
+                                        </p>
                                     </div>
-                                )
-                            })}
-                        </div>
+                                </div>
+                            )
+                        })}
+                    </div>
 
-                        <div onClick={() => move("right")} className={`${style.icon__wrapper} ${style.icon__right} noselect`}>
-                            <span className={`material-icons-outlined ${style.faqs__icon}`}>arrow_forward_ios</span>
-                        </div>
+                    <div onClick={() => move("right")} className={`${style.icon__wrapper} ${style.icon__right} noselect`}>
+                        <span className={`material-icons-outlined ${style.faqs__icon}`}>arrow_forward_ios</span>
+                    </div>
 
-                        <div className={`${style.dots} noselect`}>
-                            {faqs.map((item, index) => {
-                                return (
-                                    <div onClick={() => move("", index)} key={index} className={`${style.dot} ${slideNumber === index ? style.dot__selected : ""}`}></div>
-                                );
-                            })}
-                        </div>
-
-                    </RevealMe>
+                    <div className={`${style.dots} noselect`}>
+                        {faqs.map((item, index) => {
+                            return (
+                                <div onClick={() => move("", index)} key={index} className={`${style.dot} ${slideNumber === index ? style.dot__selected : ""}`}></div>
+                            );
+                        })}
+                    </div>
 
                 </div>
             </div>

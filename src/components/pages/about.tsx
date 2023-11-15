@@ -8,7 +8,7 @@ export default function About() {
 
             <div className={`${style.about__container} noselect`}>
 
-                <RevealMe origin="left" reset>
+                <RevealMe delay={1} origin="left" reset>
                     <div className={style.about__wrapper}>
 
                         <img alt="cellphone" draggable={false} className={style.cell__phone} src={cellphone} />

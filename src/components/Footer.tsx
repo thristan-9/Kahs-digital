@@ -10,8 +10,7 @@ export default function Footer() {
         <footer className={style.footer}>
             <div className={`${style.footer__container} container grid`}>
 
-                <RevealMe reset origin="top">
-
+                <RevealMe origin="top">
 
                     <img alt="blob" loading="lazy" draggable={false} className={style.blob} src={blob}/>
 
