@@ -66,7 +66,7 @@
     left: 0;
     width: 40px;
     height: 100%;
-    background: linear-gradient(to left,rgba(255, 255, 255, 0), #000000);
+    background: linear-gradient(to left, rgba(255, 255, 255, 0), #000000);
     z-index: var(--z-tooltip);
 }
 
@@ -94,7 +94,7 @@
     width: 50%;
     justify-content: space-around;
     align-items: center;
-    animation: slide 17s infinite linear;
+    animation: slide 10s infinite linear;
     column-gap: 2rem;
 }
 
@@ -124,7 +124,8 @@
     gap: 10px;
 }
 
-.business, .business__small {
+.business,
+.business__small {
     opacity: .6;
 }
 
@@ -218,6 +219,10 @@
 }
 
 @media screen and (min-width: 1150px) {
+    .slider {
+        animation: slide 17s infinite linear;
+    }
+
     .logos__wrapper::after {
         width: 90px;
     }
