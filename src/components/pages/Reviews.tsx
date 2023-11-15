@@ -155,7 +155,7 @@ export default function Reviews() {
                             <div className={`${style.square}`}>
                                 <div>
                                     <p className={style.square__number}>
-                                        {showCountUp ? <CountUp timer={15} end={17000} /> : 0}
+                                        {showCountUp ? <CountUp timer={10} end={17000} /> : 0}
                                     </p>
                                     <p className={style.square__text}>Visualizações em 24 hrs</p>
                                 </div>
@@ -215,7 +215,7 @@ export default function Reviews() {
                             <div className={`${style.square}`}>
                                 <div>
                                     <p className={style.square__number}>
-                                        <CountUp timer={15} end={17000} />
+                                        <CountUp timer={10} end={17000} />
                                     </p>
                                     <p className={style.square__text}>Visualizações em 24 hrs</p>
                                 </div>
