@@ -1,8 +1,9 @@
-import { useRef, useEffect } from "react";
+import { useRef, useState, useEffect } from "react";
 import scrollReveal from "./ScrollReveal";
 
 export default function RevealMe({ children, style, reset = false, delay = 150, origin = "top" }) {
   const divRef = useRef<HTMLElement>(null);
+  const [showChildren, setShowChildren] = useState(false);
 
   useEffect(() => {
     if (divRef.current) {
@@ -13,6 +14,7 @@ export default function RevealMe({ children, style, reset = false, delay = 150, 
         delay: delay,
         reset: reset
       });
+      setShowChildren(true);
     }
   }, []);
 
@@ -22,7 +24,13 @@ export default function RevealMe({ children, style, reset = false, delay = 150, 
       style={{ position: "relative", width: "auto", height: "100%", ...style }}
       className="scroll-section"
     >
-      {children}
+      {showChildren ? 
+      <>
+        {children}
+      </>
+      :
+        <div style={{display: "hidden"}}>{children}</div>
+      }
     </div>
   );
 }
