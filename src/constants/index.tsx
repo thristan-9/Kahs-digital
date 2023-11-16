@@ -74,7 +74,7 @@ export const client__2 = {
     id: "client-2",
     name: "Guilherme Kuntze",
     business: "CEO do Grupo Booz",
-    feedback: "Sério, sem palavras para o tanto que você se doa e já entregou e tão pouco tempo, não tenho dúvida da jornada de sucesso que você vai trilhar no marketing. Orgulho demais de ter você no nosso time!",
+    feedback: "Sério, sem palavras para o tanto que você se doa e já entregou em tão pouco tempo, não tenho dúvida da jornada de sucesso que você vai trilhar no marketing. Orgulho demais de ter você no nosso time!",
     img: client__img_2,
 };
 

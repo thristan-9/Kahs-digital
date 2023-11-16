@@ -81,8 +81,9 @@
 
     .cell__phone {
         position: absolute;
-        top: -25%;
-        width: clamp(20em, 80%, 25em);
+        top: -20%;
+        left: -5%;
+        width: clamp(19em, 80%, 24em);
         transition: .3s;
     }
 
@@ -93,6 +94,8 @@
 
 @media screen and (min-width: 1650px) {
     .cell__phone {
+        width: clamp(20em, 80%, 25em);
+        left: initial;
         top: -28%;
     }
 }

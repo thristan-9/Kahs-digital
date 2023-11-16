@@ -13,6 +13,7 @@
     z-index: var(--z-tooltip);
     background-color: var(--dark-color);
     margin: auto;
+    font-size: clamp(0.5rem, 1vw,1rem);
 }
 
 .btn:hover {

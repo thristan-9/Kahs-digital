@@ -14,7 +14,7 @@
 
 .hero__title {
   margin-bottom: var(--mb-1-5);
-  font-size: clamp(2rem, 4vw, 4.5rem);
+  font-size: clamp(2rem, 3vw, 4.5rem);
 }
 
 .hero__description {
@@ -80,6 +80,14 @@
 }
 
 @media screen and (min-width: 1150px) {
+  .hero__title {
+    margin-bottom: var(--mb-1-5);
+  }
+
+  .hero__icon {
+    font-size: 1.1rem;
+  }
+
   .hero__container {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
@@ -109,14 +117,16 @@
     display: block;
   }
 
-  .icons__wrapper {
+  .icon__wrapper {
     display: flex;
     align-items: center;
     justify-content: initial;
     gap: 1rem;
   }
+}
 
+@media screen and (min-width: 1650px) {
   .hero__icon {
-    font-size: 1.7rem;
-  }
+      font-size: 1.7rem;
+    }
 }
