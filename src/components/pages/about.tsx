@@ -36,7 +36,7 @@ export default function About() {
                                 Com uma paixão por ajudar as empresas a prosperar no mundo digital, fornecendo serviços que abrangem desde postagens até a criação e edição de conteúdo digital e tráfego pago.
                             </p>
                             <p className={style.about__description}>
-                                Quer você seja uma pequena startup ou uma empresa bem estabelecida, temos o conhecimento e a experiência para elevar sua presença online e atingir seus objetivos de negócios.
+                                Quer você seja uma pequena startup ou uma empresa de porte maior, temos o conhecimento e a experiência para elevar sua presença online e atingir seus objetivos de negócios.
                             </p>
 
                         </div>

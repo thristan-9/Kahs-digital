@@ -1,10 +1,12 @@
 .faqs__container {
     padding-top: 5rem;
+    text-align: center;
 }
 
 .faqs__data {
     position: relative;
     text-align: center;
+    margin-top: 5rem;
 }
 
 .slider {

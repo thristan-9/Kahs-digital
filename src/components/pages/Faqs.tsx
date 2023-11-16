@@ -49,8 +49,9 @@ export default function Faqs() {
         <section id="faqs" className={style.faqs}>
             <div className={`${style.faqs__container} container`}>
 
-                <div className={`${style.faqs__data}`}>
+                <h1 className="title">Perguntas frequentes</h1>
 
+                <div className={`${style.faqs__data}`}>
 
                     <div onClick={() => move("left")} className={`${style.icon__wrapper} ${style.icon__left} noselect`}>
                         <span className={`material-icons-outlined ${style.faqs__icon}`}>arrow_back_ios</span>
