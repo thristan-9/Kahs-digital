@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState } from "react";
 import style from "../../styles/Faqs.module.css";
 import { faqs } from "../../constants";
 
@@ -53,7 +53,7 @@ export default function Faqs() {
 
                 <div className={`${style.faqs__data}`}>
 
-                    <div onClick={() => move("left")} className={`${style.icon__wrapper} ${style.icon__left} noselect`}>
+                    <div onClick={() => move("left", undefined)} className={`${style.icon__wrapper} ${style.icon__left} noselect`}>
                         <span className={`material-icons-outlined ${style.faqs__icon}`}>arrow_back_ios</span>
                     </div>
 
@@ -74,7 +74,7 @@ export default function Faqs() {
                         })}
                     </div>
 
-                    <div onClick={() => move("right")} className={`${style.icon__wrapper} ${style.icon__right} noselect`}>
+                    <div onClick={() => move("right", undefined)} className={`${style.icon__wrapper} ${style.icon__right} noselect`}>
                         <span className={`material-icons-outlined ${style.faqs__icon}`}>arrow_forward_ios</span>
                     </div>
 
