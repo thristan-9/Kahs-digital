@@ -12,7 +12,7 @@ export default function HowWork() {
   const sliderRef = useRef(null);
 
 
-  function move(direction, index) {
+  function move(direction: string, index: number) {
     let newSlideNumber = index;
     const totalNoofSlides = sliderRef.current.children.length - 2;
 

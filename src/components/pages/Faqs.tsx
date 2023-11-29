@@ -5,9 +5,9 @@ import { faqs } from "../../constants";
 export default function Faqs() {
 
     const [slideNumber, setSlideNumber] = useState(0);
-    const sliderRef = useRef(null);
+    const sliderRef: object = useRef();
 
-    function move(direction, index) {
+    function move(direction: string, index: number) {
         let newSlideNumber = index;
         const totalNoofSlides = sliderRef.current.children.length - 1;
 
@@ -18,7 +18,7 @@ export default function Faqs() {
             newSlideNumber = slideNumber === totalNoofSlides ? 0 : slideNumber + 1
         }
 
-        Array.from(sliderRef.current.children).forEach((slide) => {
+        Array.from(sliderRef.current.children).forEach((slide: object) => {
             slide.classList.remove(style.slide__active);
             slide.classList.remove(style.slide__animation_right);
             slide.classList.remove(style.slide__animation_left);

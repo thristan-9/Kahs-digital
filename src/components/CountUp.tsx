@@ -1,6 +1,12 @@
-import {useEffect, useState, useRef} from "react";
+import { useEffect, useState, useRef } from "react";
 
-export default function CountUp({start = 0, end, timer = 50}) {
+type CountUpProps = {
+    start?: number,
+    end: number,
+    timer: number
+}
+
+export default function CountUp({ start = 0, end, timer = 50 }: CountUpProps) {
 
     const [number, setNumber] = useState(0);
     const startRef = useRef(start);
@@ -18,10 +24,12 @@ export default function CountUp({start = 0, end, timer = 50}) {
         setTimeout(updateNumber, timer);
     }
 
-    useEffect(()=>{
+    useEffect(() => {
         let isMounted = true;
-        if (isMounted) updateNumber()
-        return () => (isMounted = false)
+        if (isMounted) {
+            updateNumber()
+        }
+        return () => {isMounted = false}
     }, [start, end])
 
     return (

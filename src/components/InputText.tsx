@@ -8,7 +8,7 @@ interface InputProps extends React.HTMLAttributes<HTMLButtonElement> {
     secondary?: boolean;
 }
 
-const InputText = ({ label, disabled, secondary, ...props }: InputProps) => {
+const InputText = ({ label, disabled, ...props }: InputProps) => {
 
     const [inputValue, setInputValue] = useState(undefined)
 

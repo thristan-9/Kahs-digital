@@ -5,8 +5,6 @@ import CountUp from "../CountUp";
 import { client__1, client__2, client__3, client__4, client__logos } from "../../constants";
 import RevealMe from "../RevealMe";
 
-
-
 export default function Reviews() {
 
     const mousePosition = MousePosition();

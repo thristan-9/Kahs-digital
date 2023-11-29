@@ -1,7 +1,15 @@
 import { useRef, useEffect } from "react";
 import scrollReveal from "./ScrollReveal";
 
-export default function RevealMe({ children, style, reset = false, delay = 150, origin = "top" }) {
+type RevealMeProps = {
+  children?: any,
+  style?: object,
+  reset?: boolean,
+  delay?: number,
+  origin?: string
+}
+
+export default function RevealMe({ children, style, reset = false, delay = 150, origin = "top" }: RevealMeProps) {
   const divRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -14,6 +22,7 @@ export default function RevealMe({ children, style, reset = false, delay = 150, 
         reset: reset
       });
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   return (

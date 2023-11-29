@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
 
 import style from "../../styles/Contact.module.css";
@@ -7,14 +7,14 @@ import Button from "../Button";
 
 export default function Contact() {
 
-    const formRef = useRef();
-    const formMessageRef = useRef();
+    const formRef: object = useRef();
+    const formMessageRef: object = useRef();
 
     function sendEmail(e) {
         e.preventDefault();
 
         emailjs.sendForm('service_a0jh5yq', 'template_1wkl2lw', formRef.current, 'aE5PLTzY26wcep2fL')
-            .then((result) => {
+            .then(() => {
                 formMessageRef.current.textContent = "Messagem enviada com sucesso! ✅";
 
                 setTimeout(() => {
@@ -23,7 +23,7 @@ export default function Contact() {
 
                 formRef.current.reset();
 
-            }, (error) => {
+            }, () => {
                 formMessageRef.current.textContent = "Erro ao enviar a menssagem (service error) ❌";
             });
     }
