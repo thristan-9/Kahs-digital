@@ -39,12 +39,12 @@ export default function Hero() {
 
               <div className={`${style.icons}`}>
                 <div onClick={() => {
-                  window.open("https://www.instagram.com/kahsdigital_/", 'blank_')
+                  window.open("https://www.instagram.com/kahs.digital/", 'blank_')
                 }} className={style.icon__wrapper}>
                   <AiOutlineInstagram className={`${style.hero__icon}`} />
                 </div>
                 <div onClick={() => {
-                  window.open("https://www.instagram.com/kahs.digital/", 'blank_')
+                  window.open("https://www.linkedin.com/company/kahs-digital/", 'blank_')
                 }} className={style.icon__wrapper}>
                   <AiOutlineLinkedin className={`${style.hero__icon}`} />
                 </div>
