@@ -6,10 +6,11 @@ type RevealMeProps = {
   style?: object,
   reset?: boolean,
   delay?: number,
+  duration?: number,
   origin?: string
 }
 
-export default function RevealMe({ children, style, reset = false, delay = 150, origin = "top" }: RevealMeProps) {
+export default function RevealMe({ children, style, reset = false, delay = 150, origin = "top", duration = 1500 }: RevealMeProps) {
   const divRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
@@ -17,7 +18,7 @@ export default function RevealMe({ children, style, reset = false, delay = 150, 
       scrollReveal.reveal(divRef.current, {
         origin: origin,
         distance: '100px',
-        duration: 1500,
+        duration: duration,
         delay: delay,
         reset: reset
       });
