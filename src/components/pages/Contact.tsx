@@ -40,7 +40,7 @@ export default function Contact() {
                         <div className={`${style.form__wrapper} grid`}>
                             <div className={`${style.inputs__wrapper} grid`}>
                                 <InputText required id="user_name" name="user_name" label="Nome" />
-                                <InputText required id="user_email" name="user_email" label="E-mail" />
+                                <InputText required id="user_phone" name="user_phone" label="Celular" />
                             </div>
 
                             <div>
