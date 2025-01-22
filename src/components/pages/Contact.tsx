@@ -13,6 +13,10 @@ export default function Contact() {
     function sendEmail(e) {
         e.preventDefault();
 
+        if (window.fbq) {
+            window.fbq("track", "Click Enviar Formulario");
+        }
+
         emailjs.sendForm('service_a0jh5yq', 'template_1wkl2lw', formRef.current, 'aE5PLTzY26wcep2fL')
             .then(() => {
                 formMessageRef.current.textContent = "Messagem enviada com sucesso! ✅";

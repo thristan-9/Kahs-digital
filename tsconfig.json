@@ -21,6 +21,6 @@
     "noFallthroughCasesInSwitch": true,
     "forceConsistentCasingInFileNames": false,
   },
-  "include": ["src"],
+  "include": ["src", "global.d.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }
