@@ -32,7 +32,7 @@ export default function Footer() {
                                 if (window.fbq) {
                                     window.fbq("track", "Click instagram");
                                 }
-                                window.open("https://www.instagram.com/kahsdigital_/", 'blank_')
+                                window.open("https://www.instagram.com/kahs.digital/", 'blank_')
                             }} className={`${style.footer__icon}`} />
 
                             <AiOutlineLinkedin onClick={() => {
